@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="account_tax_template_g_iva21_bc" model="account.tax.template">
+        <field name="description">G_IVA21_BC</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="account_id" ref="l10n_es.account_common_472"/>
+        <field name="name">21% IVA Soportado (GASTOS)</field>
+        <field name="refund_account_id" ref="l10n_es.account_common_472"/>
+        <field name="chart_template_id" ref="l10n_es.account_chart_template_common"/>
+        <field name="amount" eval="21"/>
+        <field name="amount_type">percent</field>
+        <field name="tax_group_id" ref="l10n_es.tax_group_iva_21"/>
+    </record>
+
+    <record id="account_tax_template_g_iva10_bc" model="account.tax.template">
+        <field name="description">G_IVA10_BC</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="account_id" ref="l10n_es.account_common_472"/>
+        <field name="name">10% IVA Soportado (GASTOS)</field>
+        <field name="refund_account_id" ref="l10n_es.account_common_472"/>
+        <field name="chart_template_id" ref="l10n_es.account_chart_template_common"/>
+        <field name="amount" eval="10"/>
+        <field name="amount_type">percent</field>
+        <field name="tax_group_id" ref="l10n_es.tax_group_iva_10"/>
+    </record>
+
+    <record id="account_tax_template_g_iva4_bc" model="account.tax.template">
+        <field name="description">G_IVA4_BC</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="account_id" ref="l10n_es.account_common_472"/>
+        <field name="name">4% IVA Soportado (GASTOS)</field>
+        <field name="refund_account_id" ref="l10n_es.account_common_472"/>
+        <field name="chart_template_id" ref="l10n_es.account_chart_template_common"/>
+        <field name="amount" eval="4"/>
+        <field name="amount_type">percent</field>
+        <field name="tax_group_id" ref="l10n_es.tax_group_iva_4"/>
+    </record>
+
+</odoo>
