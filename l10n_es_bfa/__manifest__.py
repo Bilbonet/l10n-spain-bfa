@@ -10,6 +10,7 @@
     'website': 'https://www.bilbonet.net',
     'depends': [
         'l10n_es',
+        'l10n_es_vat_book',
     ],
     'data': [
         'data/account_tax_data.xml',

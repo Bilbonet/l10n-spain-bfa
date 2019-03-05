@@ -1,16 +1,23 @@
-.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
-   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
-   :alt: License: AGPL-3
-
 ==================================================
 Adaptaciones plan contable e impuestos para la BFA
 ==================================================
 
-Este módulo inluye las siguientes modificaciones en el plan contable (PGCE 2008)
+.. |badge1| image:: https://img.shields.io/badge/maturity-Beta-yellow.png
+    :target: https://odoo-community.org/page/development-status
+    :alt: Beta
+.. |badge2| image:: https://img.shields.io/badge/licence-AGPL--3-blue.png
+    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+    :alt: License: AGPL-3
+
+|badge1| |badge2|
+
+
+Este módulo inluye las siguientes modificaciones.
 
 * En la declaración de IVA se debe informar por separada las compras y los gastos.
   En la plantilla de impuestos del (PGC) creamos nuevos tipos de impuestos para los gastos.
 
+* En libro de iva añade el mapeo a los impuestos de gastos
 
 Configuración
 =============
