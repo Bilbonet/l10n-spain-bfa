@@ -16,6 +16,7 @@ class L10nEsBfaMod140LineTax(models.Model):
     total_amount = fields.Float(string='Total')
     move_line_ids = fields.Many2many(
         comodel_name='account.move.line', string='Move Lines')
+    account_pgc = fields.Integer(string='Account in the PGC', readonly='True')
 
     @api.multi
     @api.depends('tax_id')

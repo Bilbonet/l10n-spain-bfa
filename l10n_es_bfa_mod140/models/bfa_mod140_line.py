@@ -36,10 +36,8 @@ class L10nEsBfaMod140Line(models.Model):
     tax_line_ids = fields.One2many(comodel_name='l10n.es.bfa.mod140.line.tax',
                                    inverse_name='mod140_line_id',
                                    string='Tax Lines', copy=False)
-    exception = fields.Boolean(
-        string="Exception")
-    exception_text = fields.Char(
-        string="Exception text")
+    exception = fields.Boolean(string="Exception")
+    exception_text = fields.Char(string="Exception text")
 
     @api.multi
     @api.depends('tax_id')

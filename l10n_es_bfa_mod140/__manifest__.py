@@ -11,10 +11,21 @@
     'depends': [
         'l10n_es',
         'base_vat',
+        'l10n_es_aeat',
     ],
     'data': [
         'security/ir.model.access.csv',
+        "data/bfa_export_mod140_data.xml",
+        "data/bfa_export_mod140_activity_data.xml",
+        'wizard/mod140_export_to_bob_wizard.xml',
         'views/bfa_mod140_view.xml',
+        'views/bfa_mod140_line_view.xml',
+        'views/bfa_mod140_summary_view.xml',
+        'views/bfa_mod140_tax_summary_view.xml',
+        'report/common_templates.xml',
+        'report/bfa_mod140_report.xml',
+        'report/bfa_mod140_invoices_issued_report.xml',
+        'report/bfa_mod140_invoices_received_report.xml',
     ],
     'installable': True,
 }

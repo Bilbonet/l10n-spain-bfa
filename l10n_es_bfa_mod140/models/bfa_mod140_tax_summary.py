@@ -4,9 +4,9 @@
 from odoo import fields, models
 
 
-class L10nEsBfaMod140LineTaxSummary(models.Model):
-    _name = "l10n.es.bfa.mod140.line.tax.summary"
-    _inherit = 'l10n.es.bfa.mod140.line.summary'
+class L10nEsBfaMod140TaxSummary(models.Model):
+    _name = "l10n.es.bfa.mod140.tax.summary"
+    _inherit = 'l10n.es.bfa.mod140.summary'
 
     tax_id = fields.Many2one(
         comodel_name='account.tax',

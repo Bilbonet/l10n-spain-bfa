@@ -4,8 +4,8 @@
 from odoo import fields, models
 
 
-class L10nEsBfaMod140LineSummary(models.Model):
-    _name = "l10n.es.bfa.mod140.line.summary"
+class L10nEsBfaMod140Summary(models.Model):
+    _name = "l10n.es.bfa.mod140.summary"
 
     mod140_id = fields.Many2one(
         comodel_name='l10n.es.bfa.mod140',
