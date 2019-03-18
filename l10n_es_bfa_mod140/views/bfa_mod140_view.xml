@@ -89,18 +89,41 @@
 
                     <notebook>
                         <page name="activity" string="Activity">
-                            <group name="activity_data" string="Activity data">
-                                <field name="epigraph"/>
-                                <label string="Activity Start/End"/>
-                                <div class="o_row">
-                                    <field name="activity_start" nolabel="1"/>
-                                    <field name="activity_end" nolabel="1"/>
-                                </div>
-                            </group>
-                            <group name="domicile_activity" string="Principal domicile activity">
-                                <field name="partner_id"/>
+                            <group>
+                                <group name="group_activity_data" string="Activity data">
+                                    <field name="epigraph"/>
+                                    <label string="Activity Start/End"/>
+                                    <div class="o_row">
+                                        <field name="activity_start" nolabel="1"/>
+                                        <field name="activity_end" nolabel="1"/>
+                                    </div>
+                                    <field name="partner_id" string="Domicile activity"/>
+                                </group>
+                                <group name="group_regime_irpf" string="Net income regime IRPF">
+                                    <field name="regime_irpf"/>
+                                    <field name="eds_irpf" attrs="{'invisible':[('regime_irpf','==','N')]}"/>
+                                </group>
+                                <group name="group_regime_vat" string="Regime VAT">
+                                    <field name="reg_general"/>
+                                    <field name="reg_simplified"/>
+                                    <field name="reg_agp"/>
+                                    <field name="reg_equi"/>
+                                    <field name="reg_cash_criterion"/>
+                                    <field name="reg_others"/>
+                                </group>
+                                <group name="group_prorate_vat" string="Prorate VAT">
+                                    <label string="Prorate general"/>
+                                    <div class="o_row">
+                                        <field name="pro_general"/>
+                                        <field name="pro_general_percent" attrs="{'invisible':[('pro_general','=',False)]}" widget="percentage"/>
+                                        <label string="%" attrs="{'invisible':[('pro_general','=',False)]}"/>
+                                    </div>
+                                    <field name="pro_special"/>
+                                    <field name="all_exempt"/>
+                                </group>
                             </group>
                         </page>
+
                         <page name="invoices_issued" string="Issued Invoices">
                             <group name="issued_invoices" string="Issued Invoices">
                                 <field name="issued_line_ids" nolabel="1"/>

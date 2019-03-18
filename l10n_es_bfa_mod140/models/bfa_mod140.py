@@ -11,7 +11,7 @@ from odoo.exceptions import Warning as UserError
 
 class L10nEsBfaMod140(models.Model):
     _name = "l10n.es.bfa.mod140"
-    _description = "BFA Modelo 140 Módulo Declaración"
+    _description = "BFA Modelo 140 Statement module"
     _rec_name = 'name'
     _period_quarterly = True
     _period_monthly = True
@@ -170,6 +170,7 @@ class L10nEsBfaMod140(models.Model):
         default=False,
         help='Applies joint amortization, only for microenterprise',
         states={'draft': [('readonly', False)]})
+
     epigraph = fields.Char(
         string="Activity epigraph", size=7, required=True, readonly=True,
         states={'draft': [('readonly', False)]})
@@ -179,6 +180,45 @@ class L10nEsBfaMod140(models.Model):
     activity_end = fields.Date(
         string="Activity end date", readonly=True,
         states={'draft': [('readonly', False)]})
+    regime_irpf = fields.Selection(
+        selection=[
+            ('N', 'Directa Normal'),
+            ('S', 'Directa Simplificada'),
+        ], string="Regime IRPF",
+        default='N', readonly=True, required=True,
+        states={'draft': [('readonly', False)]})
+    eds_irpf = fields.Boolean(string='EDS IRPF', readonly=True,
+        default=False,
+        help='Charges and payments EDS IRPF',
+        states={'draft': [('readonly', False)]})
+    reg_general = fields.Boolean(string='General regime', readonly=True,
+        default=True, states={'draft': [('readonly', False)]})
+    reg_simplified = fields.Boolean(string='Simplified regime', readonly=True,
+        default=False, states={'draft': [('readonly', False)]})
+    reg_agp = fields.Boolean(
+        string='Special regime agriculture livestock fishing', readonly=True,
+        default=False, states={'draft': [('readonly', False)]})
+    reg_equi = fields.Boolean(string='Equivalence surcharge', readonly=True,
+        default=False, states={'draft': [('readonly', False)]})
+    reg_cash_criterion = fields.Boolean(
+        string='Cash criterion', readonly=True,
+        default=False, states={'draft': [('readonly', False)]})
+    reg_others = fields.Boolean(
+        string='Others special regimes', readonly=True,
+        default=False, states={'draft': [('readonly', False)]})
+    pro_general = fields.Boolean(
+        string='Prorate general', readonly=True,
+        default=False, states={'draft': [('readonly', False)]})
+    pro_general_percent = fields.Integer(
+        string="Prorate general percent", defaul=0,
+        help="Prorate general (%)", readonly=True,
+        states={'draft': [('readonly', False)]})
+    pro_special = fields.Boolean(
+        string='Prorate special', readonly=True,
+        default=False, states={'draft': [('readonly', False)]})
+    all_exempt = fields.Boolean(
+        string='All exempt operations', readonly=True,
+        default=False, states={'draft': [('readonly', False)]})
 
     line_ids = fields.One2many(
         comodel_name='l10n.es.bfa.mod140.line',
@@ -254,6 +294,8 @@ class L10nEsBfaMod140(models.Model):
     _sql_constraints = [
         ('name_uniq', 'unique(name, company_id)',
          'BFA report identifier must be unique'),
+        ('pro_general_percent_not_negative', 'CHECK (pro_general_percent>=0)',
+         'Prorate general percent cannot be negative.')
     ]
 
     @api.onchange('company_id')
@@ -349,6 +391,10 @@ class L10nEsBfaMod140(models.Model):
             raise exceptions.UserError(_(
                 "Company vat and representative vat can't be equals."
             ))
+    @api.onchange('pro_general')
+    def onchange_pro_generl(self):
+        if not self.pro_general:
+            self.pro_general_percent = 0
 
     @api.model
     def _report_identifier_get(self, vals):

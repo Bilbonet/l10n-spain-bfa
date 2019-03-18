@@ -6,6 +6,7 @@ from odoo import api, fields, models
 
 class L10nEsBfaMod140LineTax(models.Model):
     _name = "l10n.es.bfa.mod140.line.tax"
+    _description = "BFA Modelo 140 Tax lines"
 
     mod140_line_id = fields.Many2one(comodel_name='l10n.es.bfa.mod140.line',
                                      required=True, ondelete='cascade')

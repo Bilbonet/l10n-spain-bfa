@@ -6,10 +6,10 @@ from odoo import api, fields, models
 
 class L10nEsBfaMod140Line(models.Model):
     _name = "l10n.es.bfa.mod140.line"
-    _order = 'entry_number asc, ref asc, invoice_date asc'
+    _description = "BFA Modelo 140 Invoices"
+    _order = 'ref asc, invoice_date asc'
 
     ref = fields.Char('Reference')
-    entry_number = fields.Integer('Entry number')
     external_ref = fields.Char('External Reference')
     line_type = fields.Selection(selection=[
         ('issued', 'Issued'),
