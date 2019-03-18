@@ -392,7 +392,7 @@ class L10nEsBfaMod140(models.Model):
                 "Company vat and representative vat can't be equals."
             ))
     @api.onchange('pro_general')
-    def onchange_pro_generl(self):
+    def onchange_pro_general(self):
         if not self.pro_general:
             self.pro_general_percent = 0
 
@@ -497,16 +497,26 @@ class L10nEsBfaMod140(models.Model):
             partner = invoice.commercial_partner_id
             ref = invoice.number
             ext_ref = invoice.reference
+            operation_type = 'A'
+            register_type = 'A'
+            special_operation = ''
+
+        if line_type in ('rectification_issued', 'rectification_received'):
+            register_type = 'B'
+
         return {
+            'mod140_id': self.id,
             'line_type': line_type,
+            'ref': ref,
+            'external_ref': ext_ref,
+            'invoice_id': invoice.id,
+            'move_id': move.id,
             'invoice_date': move.date,
             'partner_id': partner.id,
             'vat_number': partner.vat,
-            'invoice_id': invoice.id,
-            'ref': ref,
-            'external_ref': ext_ref,
-            'mod140_id': self.id,
-            'move_id': move.id,
+            'operation_type': operation_type,
+            'register_type': register_type,
+            'special_operation': special_operation,
         }
 
     def _get_mod140_line_tax(self, tax, move, mod140_line):
