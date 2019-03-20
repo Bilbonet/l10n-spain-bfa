@@ -244,6 +244,6 @@
         <field name="name">Tipo de Registro 4 – Registro de ingresos</field>
         <field name="subconfig_id" ref="bfa_mod140_incomes_export_config"/>
         <field name="export_type">subconfig</field>
-        <field name="repeat_expression">object.issued_line_ids</field>
+        <field name="repeat_expression">object.all_issued_line_ids</field>
     </record>
 </odoo>

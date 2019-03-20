@@ -67,7 +67,7 @@
         <field name="sequence">6</field>
         <field name="export_config_id" ref="bfa_mod140_activity_export_config"/>
         <field name="name">Identificación Actividad (Discriminante)</field>
-        <field name="fixed_value">0</field>
+        <field name="fixed_value"></field>
         <field name="export_type">integer</field>
         <field name="apply_sign" eval="False"/>
         <field name="size">2</field>

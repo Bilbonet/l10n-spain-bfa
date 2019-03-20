@@ -39,6 +39,10 @@ class L10nEsBfaMod140Line(models.Model):
     operation_type = fields.Char(string="Operation type")
     register_type = fields.Char(string="Register type")
     special_operation = fields.Char(string="Special operation")
+    key_nif = fields.Selection(selection=[
+        ('1', 'NIF'),
+        ('2', 'NIF intracommunity')],
+        string='Key identification. Type of identification document')
     exception = fields.Boolean(string="Exception")
     exception_text = fields.Char(string="Exception text")
 

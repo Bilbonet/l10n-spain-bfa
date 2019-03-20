@@ -70,7 +70,7 @@
                         </group>
 
                         <group name="group_other_data" string="Other data">
-                            <field name="company_id" required="1" groups="base.group_multi_company"/>
+                            <field name="company_id" required="1"/>
                             <field name="type"/>
                             <field name="size"/>
                             <field name="amortization" attrs="{'invisible':[('size','==','P')]}"/>
@@ -139,7 +139,7 @@
                             </group>
                         </page>
 
-                        <page name="received_invoices" string="Received Invoices">
+                        <page name="invoices_received" string="Received Invoices">
                             <group name="received_invoices" string="Received Invoices">
                                 <field name="received_line_ids" nolabel="1"/>
                             </group>

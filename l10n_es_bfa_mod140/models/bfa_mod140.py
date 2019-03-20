@@ -226,6 +226,13 @@ class L10nEsBfaMod140(models.Model):
         string='Issued/Received invoices',
         copy=False,
         readonly="True")
+    all_issued_line_ids = fields.One2many(
+        comodel_name='l10n.es.bfa.mod140.line',
+        inverse_name='mod140_id',
+        domain=[('line_type', 'in', ['issued', 'rectification_issued'])],
+        string='Issued Refund Invoices',
+        copy=False,
+        readonly="True")
     issued_line_ids = fields.One2many(
         comodel_name='l10n.es.bfa.mod140.line',
         inverse_name='mod140_id',
@@ -300,13 +307,10 @@ class L10nEsBfaMod140(models.Model):
 
     @api.onchange('company_id')
     def onchange_company_id(self):
-        """Load some company data (the VAT number) when company changes.
+        """Load some company data when company changes.
         """
         if self.company_id.vat:
-            # Remove the ES part from spanish vat numbers
-            #  (ES12345678Z => 12345678Z)
-            self.company_vat = re.match(
-                "(ES){0,1}(.*)", self.company_id.vat).groups()[1]
+            self.company_vat = self.normalize_vat(self.company_id.vat)
 
         #Declarant Data
         self.declarant_name = self.env.user.partner_id.lastname + ', ' + \
@@ -385,12 +389,14 @@ class L10nEsBfaMod140(models.Model):
         if self.size == 'P':
             self.amortization = False
 
-    @api.onchange('representative_vat')
+    @api.onchange('company_vat', 'representative_vat')
     def onchange_representative_vat(self):
-        if self.company_vat == self.representative_vat:
-            raise exceptions.UserError(_(
-                "Company vat and representative vat can't be equals."
-            ))
+        if self.representative_vat:
+            if self.company_vat == self.representative_vat:
+                raise exceptions.UserError(_(
+                    "Company vat and representative vat can't be equals."
+                ))
+
     @api.onchange('pro_general')
     def onchange_pro_general(self):
         if not self.pro_general:
@@ -500,9 +506,21 @@ class L10nEsBfaMod140(models.Model):
             operation_type = 'A'
             register_type = 'A'
             special_operation = ''
+            key_nif = '1'
 
-        if line_type in ('rectification_issued', 'rectification_received'):
+        if invoice.type == 'out_refund':
+            line_type = 'rectification_issued'
+        if invoice.type == 'in_refund':
+            line_type = 'rectification_received'
+
+        if line_type in ['rectification_issued', 'rectification_received']:
+            register_type = 'E'
+        # Varios (tipos impositivos/cuentas PGC)
+        if len(invoice.tax_line_ids) > 1:
             register_type = 'B'
+        #Identification key: Depends of fiscal position name
+        if 'INTRACOMUNI' in partner.property_account_position_id.name.upper():
+            key_nif = '2'
 
         return {
             'mod140_id': self.id,
@@ -513,10 +531,11 @@ class L10nEsBfaMod140(models.Model):
             'move_id': move.id,
             'invoice_date': move.date,
             'partner_id': partner.id,
-            'vat_number': partner.vat,
+            'vat_number': self.normalize_vat(partner.vat),
             'operation_type': operation_type,
             'register_type': register_type,
             'special_operation': special_operation,
+            'key_nif': key_nif,
         }
 
     def _get_mod140_line_tax(self, tax, move, mod140_line):
@@ -538,12 +557,6 @@ class L10nEsBfaMod140(models.Model):
         if fee_move_lines:
             fee_amount_untaxed = sum(
                 x.credit - x.debit for x in fee_move_lines)
-
-        if mod140_line.line_type == 'issued' and fee_amount_untaxed < 0.0:
-            mod140_line.line_type = 'rectification_issued'
-
-        if mod140_line.line_type == 'received' and fee_amount_untaxed > 0.0:
-            mod140_line.line_type = 'rectification_received'
 
         if mod140_line.line_type in ['received', 'rectification_received']:
             base_amount_untaxed *= -1
@@ -745,10 +758,6 @@ class L10nEsBfaMod140(models.Model):
         return vals
 
     @api.model
-    def _filter_phone(self, phone):
-        return (phone or '').replace(" ", "")[-9:]
-
-    @api.model
     def _prepare_bfa_sequence_vals(self, sequence, bfa_num, company):
         return {
             'name': sequence,
@@ -786,6 +795,17 @@ class L10nEsBfaMod140(models.Model):
         return res
 
     @api.model
+    def _filter_phone(self, phone):
+        return (phone or '').replace(" ", "")[-9:]
+
+    @api.model
+    def normalize_vat(self, vat):
+        # Remove the ES part from spanish vat numbers
+        #  (ES12345678Z => 12345678Z)
+        vat = re.match("(ES){0,1}(.*)", vat).groups()[1]
+        return vat
+
+    @api.model
     def get_html(self):
         """ Render dynamic view from ir.action.client"""
         result = {}
@@ -798,16 +818,16 @@ class L10nEsBfaMod140(models.Model):
                 rcontext)
         return result
 
-    @api.model
-    def _get_formatted_date(self, date):
-        """Convert an Odoo date to BOE export date format.
-
-        :param date: Date in Odoo format or falsy value
-        :return: Date formatted for BOE export.
-        """
-        if not date:
-            return ''
-        return datetime.strftime(fields.Date.from_string(date), "%d%m%Y")
+    # @api.model
+    # def _get_formatted_date(self, date):
+    #     """Convert an Odoo date to BOE export date format.
+    #
+    #     :param date: Date in Odoo format or falsy value
+    #     :return: Date formatted for BOE export.
+    #     """
+    #     if not date:
+    #         return ''
+    #     return datetime.strftime(fields.Date.from_string(date), "%d%m%Y")
 
     def _format_date(self, date):
         # format date following user language
