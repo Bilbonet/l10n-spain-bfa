@@ -519,6 +519,8 @@ class L10nEsBfaMod140(models.Model):
         if len(invoice.tax_line_ids) > 1:
             register_type = 'B'
         #Identification key: Depends of fiscal position name
+        #Tambien se podria obtener segun el tipo de impuesto:
+        #   Se el impuesto de la lina coincide con algun tipo intracomunitario
         if 'INTRACOMUNI' in partner.property_account_position_id.name.upper():
             key_nif = '2'
 
@@ -564,8 +566,8 @@ class L10nEsBfaMod140(models.Model):
 
         # Busca la C.C en la linea de la factura que contenga el impuesto
         account_pgc = self.env['account.invoice.line'].search([
-            ('invoice_id', '=', fee_move_lines.invoice_id.id),
-            ('invoice_line_tax_ids', 'in', tax.id)],
+            ('invoice_id', '=', move.line_ids[0].invoice_id.id),
+            ('invoice_line_tax_ids', 'in', tax.ids)],
             limit=1).account_id.code[:3]
 
         return {
@@ -662,14 +664,26 @@ class L10nEsBfaMod140(models.Model):
             rec._clear_old_data()
 
             tax_model = self.env['account.tax']
+            # Obtain Map code template from mod140.
+            tax_code_map = self.env['l10n.es.aeat.map.tax'].search(
+                [('model', '=', '140'),
+                 '|',
+                 ('date_from', '<=', rec.date_start),
+                 ('date_from', '=', False),
+                 '|',
+                 ('date_to', '>=', rec.date_end),
+                 ('date_to', '=', False)], limit=1)
+            if not tax_code_map:
+                raise UserError(_('No BFA Model 140 Tax Mapping was found'))
 
-            # Obtain all the codes from account.tax
-            codes_issued = self.env['account.tax'].search(
-                [('type_tax_use', '=', 'sale'),
-                 ('amount', '>=', '0')]).mapped('description')
-            codes_received = self.env['account.tax'].search(
-                [('type_tax_use', '=', 'purchase'),
-                 ('amount', '>=', '0')]).mapped('description')
+            # Obtain all the codes from account.tax.code.template
+            codes_issued = tax_code_map.map_line_ids.mapped(
+                'tax_ids').filtered(
+                lambda t: t.type_tax_use == 'sale').mapped('description')
+            codes_received = tax_code_map.map_line_ids.mapped(
+                'tax_ids').filtered(
+                lambda t: t.type_tax_use == 'purchase').mapped(
+                'description')
 
             # search the account.tax referred to by codes and the company
             taxes_issued = tax_model.search(

@@ -15,9 +15,10 @@
     ],
     'data': [
         'security/ir.model.access.csv',
-        "data/bfa_export_mod140_data.xml",
-        "data/bfa_export_mod140_activity_data.xml",
-        "data/bfa_export_mod140_incomes_data.xml",
+        'data/map_taxes_mod140.xml',
+        'data/bfa_export_mod140_data.xml',
+        'data/bfa_export_mod140_activity_data.xml',
+        'data/bfa_export_mod140_incomes_data.xml',
         'wizard/mod140_export_to_bob_wizard.xml',
         'views/bfa_mod140_view.xml',
         'views/bfa_mod140_line_view.xml',
