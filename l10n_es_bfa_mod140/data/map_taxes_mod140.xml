@@ -87,15 +87,6 @@
             ref('l10n_es.account_tax_template_p_iva4_bi'),
             ref('l10n_es.account_tax_template_p_iva10_bi'),
             ref('l10n_es.account_tax_template_p_iva21_bi'),
-            ref('l10n_es.account_tax_template_p_iva4_sp_in_2'),
-            ref('l10n_es.account_tax_template_p_iva10_sp_in_2'),
-            ref('l10n_es.account_tax_template_p_iva21_sp_in_2'),
-            ref('l10n_es.account_tax_template_p_iva4_ic_bc_1'),
-            ref('l10n_es.account_tax_template_p_iva10_ic_bc_1'),
-            ref('l10n_es.account_tax_template_p_iva21_ic_bc_1'),
-            ref('l10n_es.account_tax_template_p_iva4_ic_bi_1'),
-            ref('l10n_es.account_tax_template_p_iva10_ic_bi_1'),
-            ref('l10n_es.account_tax_template_p_iva21_ic_bi_1'),
             ref('l10n_es.account_tax_template_p_iva4_ibc'),
             ref('l10n_es.account_tax_template_p_iva10_ibc'),
             ref('l10n_es.account_tax_template_p_iva21_ibc'),
@@ -103,13 +94,18 @@
         <field name="name">SuministroFactRecibidas Sujetas</field>
     </record>
 
-    <record id="bfa_mod140_map_line_SFRSA" model="l10n.es.aeat.map.tax.line">
+    <record id="bfa_mod140_map_line_SFRI" model="l10n.es.aeat.map.tax.line">
         <field name="field_number">09</field>
         <field name="map_parent_id" ref="bfa_mod140_map"/>
         <field name="tax_ids" eval="[(6, 0, [
-            ref('l10n_es.account_tax_template_p_iva12_agr'),
+            ref('l10n_es.account_tax_template_p_iva4_ic_bc_1'),
+            ref('l10n_es.account_tax_template_p_iva10_ic_bc_1'),
+            ref('l10n_es.account_tax_template_p_iva21_ic_bc_1'),
+            ref('l10n_es.account_tax_template_p_iva4_ic_bi_1'),
+            ref('l10n_es.account_tax_template_p_iva10_ic_bi_1'),
+            ref('l10n_es.account_tax_template_p_iva21_ic_bi_1'),
         ])]"/>
-        <field name="name">SuministroFactRecibidas Sujetas Agricultura</field>
+        <field name="name">SuministroFactRecibidas Intracomunitarias</field>
     </record>
 
     <record id="bfa_mod140_map_line_SFRISP" model="l10n.es.aeat.map.tax.line">
@@ -126,8 +122,28 @@
         <field name="name">SuministroFactRecibidas ISP</field>
     </record>
 
-    <record id="bfa_mod140_map_line_SFRBI" model="l10n.es.aeat.map.tax.line">
+    <record id="bfa_mod140_map_line_SFRIISP" model="l10n.es.aeat.map.tax.line">
         <field name="field_number">11</field>
+        <field name="map_parent_id" ref="bfa_mod140_map"/>
+        <field name="tax_ids" eval="[(6, 0, [
+            ref('l10n_es.account_tax_template_p_iva4_sp_in_2'),
+            ref('l10n_es.account_tax_template_p_iva10_sp_in_2'),
+            ref('l10n_es.account_tax_template_p_iva21_sp_in_2'),
+        ])]"/>
+        <field name="name">SuministroFactRecibidas Intracomunitarias ISP</field>
+    </record>
+
+    <record id="bfa_mod140_map_line_SFRSA" model="l10n.es.aeat.map.tax.line">
+        <field name="field_number">12</field>
+        <field name="map_parent_id" ref="bfa_mod140_map"/>
+        <field name="tax_ids" eval="[(6, 0, [
+            ref('l10n_es.account_tax_template_p_iva12_agr'),
+        ])]"/>
+        <field name="name">SuministroFactRecibidas Sujetas Agricultura</field>
+    </record>
+
+    <record id="bfa_mod140_map_line_SFRBI" model="l10n.es.aeat.map.tax.line">
+        <field name="field_number">13</field>
         <field name="map_parent_id" ref="bfa_mod140_map"/>
         <field name="tax_ids" eval="[(6, 0, [
             ref('l10n_es.account_tax_template_p_iva4_bi'),
@@ -138,7 +154,7 @@
     </record>
 
     <record id="bfa_mod140_map_line_SFRNS" model="l10n.es.aeat.map.tax.line">
-        <field name="field_number">12</field>
+        <field name="field_number">14</field>
         <field name="map_parent_id" ref="bfa_mod140_map"/>
         <field name="tax_ids" eval="[(6, 0, [
             ref('l10n_es.account_tax_template_p_iva0_ns'),
@@ -147,7 +163,7 @@
     </record>
 
     <record id="bfa_mod140_map_line_RE" model="l10n.es.aeat.map.tax.line">
-        <field name="field_number">13</field>
+        <field name="field_number">15</field>
         <field name="map_parent_id" ref="bfa_mod140_map"/>
         <field name="tax_ids" eval="[(6, 0, [
             ref('l10n_es.account_tax_template_p_req52'),
@@ -161,7 +177,7 @@
     </record>
     
     <record id="bfa_mod140_map_line_SFRND" model="l10n.es.aeat.map.tax.line">
-        <field name="field_number">14</field>
+        <field name="field_number">16</field>
         <field name="map_parent_id" ref="bfa_mod140_map"/>
         <field name="tax_ids" eval="[(6, 0, [
             ref('l10n_es.account_tax_template_p_iva0_nd'),

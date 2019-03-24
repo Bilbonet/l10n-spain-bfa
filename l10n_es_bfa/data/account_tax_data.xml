@@ -56,7 +56,7 @@
        Mapeo Impuestos Gastos Modelo 140
    -->
     <record id="bfa_mod140_map_line_GASTO" model="l10n.es.aeat.map.tax.line">
-        <field name="field_number">15</field>
+        <field name="field_number">17</field>
         <field name="map_parent_id" ref="l10n_es_bfa_mod140.bfa_mod140_map"/>
         <field name="tax_ids" eval="[(6, 0, [
             ref('l10n_es_bfa.account_tax_template_g_iva21_bc'),

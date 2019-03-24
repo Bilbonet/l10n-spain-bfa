@@ -12,7 +12,8 @@ class L10nEsBfaMod140LineTax(models.Model):
                                      required=True, ondelete='cascade')
     base_amount = fields.Float(string='Base')
     tax_id = fields.Many2one(comodel_name='account.tax', string='Tax')
-    tax_rate = fields.Float(string='Tax Rate (%)', compute='_compute_tax_rate')
+    tax_rate = fields.Float(string='Tax Rate (%)', default=0,
+                            compute='_compute_tax_rate')
     tax_amount = fields.Float(string='Tax fee')
     total_amount = fields.Float(string='Total')
     move_line_ids = fields.Many2many(
@@ -23,4 +24,5 @@ class L10nEsBfaMod140LineTax(models.Model):
     @api.depends('tax_id')
     def _compute_tax_rate(self):
         for rec in self:
-            rec.tax_rate = rec.tax_id.amount
+            if rec.mod140_line_id.special_operation not in ['I', 'P']:
+                rec.tax_rate = rec.tax_id.amount

@@ -104,7 +104,7 @@
             </span>
         </td>
         <td id="data_invoice_date">
-         <span t-esc="o._format_date(l.invoice_date)"/>
+            <span t-esc="o._format_date(l.invoice_date)"/>
         </td>
         <td id="data_company">
             <t t-set="res_model" t-value="'res.partner'"/>

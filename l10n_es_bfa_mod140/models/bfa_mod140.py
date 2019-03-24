@@ -230,7 +230,7 @@ class L10nEsBfaMod140(models.Model):
         comodel_name='l10n.es.bfa.mod140.line',
         inverse_name='mod140_id',
         domain=[('line_type', 'in', ['issued', 'rectification_issued'])],
-        string='Issued Refund Invoices',
+        string='ALL Issued invoices',
         copy=False,
         readonly="True")
     issued_line_ids = fields.One2many(
@@ -245,6 +245,13 @@ class L10nEsBfaMod140(models.Model):
         inverse_name='mod140_id',
         domain=[('line_type', '=', 'rectification_issued')],
         string='Issued Refund Invoices',
+        copy=False,
+        readonly="True")
+    all_received_line_ids = fields.One2many(
+        comodel_name='l10n.es.bfa.mod140.line',
+        inverse_name='mod140_id',
+        domain=[('line_type', 'in', ['received', 'rectification_received'])],
+        string='All Received invoices',
         copy=False,
         readonly="True")
     received_line_ids = fields.One2many(
@@ -515,14 +522,51 @@ class L10nEsBfaMod140(models.Model):
 
         if line_type in ['rectification_issued', 'rectification_received']:
             register_type = 'E'
-        # Varios (tipos impositivos/cuentas PGC)
-        if len(invoice.tax_line_ids) > 1:
+        # elif len(invoice.tax_line_ids) > 1:
+        #     register_type = 'B'  #Varios tipos impositivos/cuentas PGC
+
+        """
+            Some values depends on the tax type.
+            We search in the map taxes of the model
+        """
+        # Obtain Map code template from mod140.
+        tax_code_map = self.env['l10n.es.aeat.map.tax'].search(
+            [('model', '=', '140'),
+             '|',
+             ('date_from', '<=', self.date_start),
+             ('date_from', '=', False),
+             '|',
+             ('date_to', '>=', self.date_end),
+             ('date_to', '=', False)], limit=1)
+        # Taxes codes of the invoice
+        taxes_codes = move.line_ids.mapped('tax_line_id').mapped('description')
+
+        # Different tax types in the invoice
+        map_codes = tax_code_map.map_line_ids.mapped(
+            'tax_ids').mapped('description')
+        same_values = set(taxes_codes) & set(map_codes)
+        if len(same_values) > 1:
             register_type = 'B'
-        #Identification key: Depends of fiscal position name
-        #Tambien se podria obtener segun el tipo de impuesto:
-        #   Se el impuesto de la lina coincide con algun tipo intracomunitario
-        if 'INTRACOMUNI' in partner.property_account_position_id.name.upper():
-            key_nif = '2'
+
+        #ISP: Obtain all the codes with ISP from map taxes
+        #Compare ISP codes with move tax codes
+        map_codes = tax_code_map.map_line_ids.filtered(
+            lambda t: t.field_number in [2, 10, 11]).mapped(
+            'tax_ids').mapped('description')
+        same_values = set(taxes_codes) & set(map_codes)
+        if same_values:
+            special_operation = 'I'
+
+        # Intracomunitari Received
+        if line_type in ['received', 'rectification_received']:
+            # Compare Intracomunitari codes with move tax codes
+            map_codes = tax_code_map.map_line_ids.filtered(
+                lambda t: t.field_number in [9, 11]).mapped(
+                'tax_ids').mapped('description')
+            same_values = set(taxes_codes) & set(map_codes)
+            if same_values:
+                special_operation = 'P'
+                key_nif = '2'  # Identification key: Intracomunitari
 
         return {
             'mod140_id': self.id,
@@ -564,9 +608,8 @@ class L10nEsBfaMod140(models.Model):
             base_amount_untaxed *= -1
             fee_amount_untaxed *= -1
 
-        # Busca la C.C en la linea de la factura que contenga el impuesto
         account_pgc = self.env['account.invoice.line'].search([
-            ('invoice_id', '=', move.line_ids[0].invoice_id.id),
+            ('invoice_id', '=', mod140_line.invoice_id.id),
             ('invoice_line_tax_ids', 'in', tax.ids)],
             limit=1).account_id.code[:3]
 
