@@ -12,6 +12,7 @@
         'l10n_es',
         'base_vat',
         'l10n_es_aeat',
+        'l10n_es_bfa',
     ],
     'data': [
         'security/ir.model.access.csv',
