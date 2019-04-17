@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <record id="l10n_es_bfa_mod140_line_noinvoice_form_view" model="ir.ui.view">
+    <field name="name">l10n_es_bfa_mod140.line.noinvoice.form</field>
+    <field name="model">l10n.es.bfa.mod140.line.noinvoice</field>
+    <field name="arch" type="xml">
+      <form string="Expenses without invoice">
+        <sheet>
+          <group name="main">
+              <field name="ref"/>
+              <field name="move_id" />
+              <field name="move_line_id" />
+              <field name="date" />
+              <field name="account_pgc" />
+              <field name="amount" />
+              <field name="exception" />
+              <field name="exception_text"/>
+          </group>
+          <!--<notebook>-->
+            <!--<page name="taxes" string="Taxes">-->
+              <!--<group>-->
+                <!--<field name="tax_line_ids" nolabel="1">-->
+                  <!--<tree>-->
+                    <!--<field name="base_amount" />-->
+                    <!--<field name="tax_id" />-->
+                    <!--<field name="tax_amount" />-->
+                    <!--<field name="total_amount"/>-->
+                  <!--</tree>-->
+                  <!--<form>-->
+                    <!--<group>-->
+                      <!--<field name="base_amount" />-->
+                      <!--<field name="tax_id" />-->
+                      <!--<field name="tax_amount" />-->
+                      <!--<field name="total_amount"/>-->
+                    <!--</group>-->
+                    <!--<group name="move_lines_grp" string="Move Lines">-->
+                      <!--<field name="move_line_ids" nolabel="1"/>-->
+                    <!--</group>-->
+                  <!--</form>-->
+                <!--</field>-->
+              <!--</group>-->
+            <!--</page>-->
+          <!--</notebook>-->
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="l10n_es_bfa_mod140_line_noinvoice_tree_view" model="ir.ui.view">
+    <field name="name">l10n_es_bfa_mod140.line.noinvoice.tree</field>
+    <field name="model">l10n.es.bfa.mod140.line.noinvoice</field>
+    <field name="arch" type="xml">
+      <tree string="Expenses without invoices" colors="red:exception==True">
+        <field name="ref"/>
+        <field name="move_id" />
+        <field name="date" />
+        <field name="account_pgc" />
+        <field name="amount" />
+        <field name="exception" />
+        <field name="exception_text"/>
+      </tree>
+    </field>
+  </record>
+</odoo>

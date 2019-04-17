@@ -255,4 +255,13 @@
         <field name="export_type">subconfig</field>
         <field name="repeat_expression">object.all_received_line_ids</field>
     </record>
+    <!-- Tipo de Registro 5 – Registro de gastos SIN FACTURA: -->
+    <record id="bfa_mod140_main_export_line_25" model="aeat.model.export.config.line">
+        <field name="sequence">25</field>
+        <field name="export_config_id" ref="bfa_mod140_main_export_config"/>
+        <field name="name">Tipo de Registro 5 – Registro de gastos SIN FACTURA</field>
+        <field name="subconfig_id" ref="bfa_mod140_expenses_noinvoice_export_config"/>
+        <field name="export_type">subconfig</field>
+        <field name="repeat_expression">object.noinvoice_ids</field>
+    </record>
 </odoo>

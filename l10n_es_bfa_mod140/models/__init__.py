@@ -5,3 +5,4 @@ from . import bfa_mod140_line
 from . import bfa_mod140_summary
 from . import bfa_mod140_line_tax
 from . import bfa_mod140_tax_summary
+from . import bfa_mod140_line_noinvoice

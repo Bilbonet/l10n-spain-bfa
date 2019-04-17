@@ -305,6 +305,13 @@ class L10nEsBfaMod140(models.Model):
         domain=[('book_type', '=', 'received')],
         readonly="True")
 
+    noinvoice_ids = fields.One2many(
+        comodel_name='l10n.es.bfa.mod140.line.noinvoice',
+        inverse_name='mod140_id',
+        string='Expenses without invoice',
+        copy=False,
+        readonly="True")
+
     _sql_constraints = [
         ('name_uniq', 'unique(name, company_id)',
          'BFA report identifier must be unique'),
@@ -488,7 +495,7 @@ class L10nEsBfaMod140(models.Model):
 
     @api.multi
     def button_recalculate(self):
-        self.write({'calculation_date': fields.Datetime.now()})
+        # self.write({'calculation_date': fields.Datetime.now()})
         return self.button_calculate()
 
     def _get_vals_invoice_line(self, move, line_type):
@@ -678,12 +685,66 @@ class L10nEsBfaMod140(models.Model):
     def _create_mod140_records(self, move, line_type, taxes):
         line = self._create_mod140_line(
             move, line_type)
-        # Create tax lines
+        # Create tax lines filtered by taxes maped
         ml_taxes = move.line_ids.mapped('tax_ids')
         for tax in ml_taxes.filtered(lambda x: x.id in taxes.ids):
             # Create tax lines for the current mod140_line
             self._create_mod140_line_tax(
                 tax, line, move)
+
+    # ----------------------------------
+    # Account move lines without invoice
+    # ----------------------------------
+    def _get_account_moves_lines_noinvoice(self):
+        aml_obj = self.env['account.move.line']
+        lines = aml_obj.search([
+            ('date', '>=', self.date_start),
+            ('date', '<=', self.date_end),
+            ('invoice_id', '=', False),
+            ('debit', '!=', 0)])
+        # Filter by expenses group PGC account code
+        lines_expenses = lines.filtered(
+            lambda x: x.account_id.code[:2] in ('62', '64'))
+
+        return lines_expenses
+
+    def _create_mod140_noinvoice_records(self, line):
+        """
+            This function create a new record in Expense
+            without invoice
+
+            Args:
+                line (obj): account.move.line
+        """
+
+        mod140_line_obj = self.env['l10n.es.bfa.mod140.line.noinvoice']
+        """
+           Make the dictionary to create a new record in
+           Expense without invoice
+        """
+        vals = {
+            'mod140_id': self.id,
+            'move_id': line.move_id.id,
+            'move_line_id': line.id,
+            'ref': line.name,
+            'date': line.date,
+            'account_pgc': line.account_id.code[:3],
+            'amount': line.debit,
+        }
+
+        exception_text = ""
+        exception = False
+        if vals['amount'] < 0:
+            exception = True
+            exception_text += _("The amount is negative")
+
+        if exception:
+            vals.update({
+                'exception': True,
+                'exception_text': exception_text,
+            })
+
+        return mod140_line_obj.create(vals)
 
     def _clear_old_data(self):
         """
@@ -692,6 +753,7 @@ class L10nEsBfaMod140(models.Model):
         self.line_ids.unlink()
         self.summary_ids.unlink()
         self.tax_summary_ids.unlink()
+        self.noinvoice_ids.unlink()
 
     def _calculate_mod140(self):
         """
@@ -762,6 +824,7 @@ class L10nEsBfaMod140(models.Model):
             rec._create_mod140_tax_summary(
                 tax_summary_data_recs, rec.issued_tax_summary_ids)
             rec._create_mod140_summary(rec.issued_tax_summary_ids, book_type)
+
             # Received Summary
             book_type = 'received'
             received_tax_lines = rec.received_line_ids.mapped(
@@ -776,6 +839,11 @@ class L10nEsBfaMod140(models.Model):
                 tax_summary_data_recs, rec.received_tax_summary_ids)
             rec._create_mod140_summary(rec.received_tax_summary_ids,
                                        book_type)
+
+            # Expenses without invoice
+            moves_lines_noinvoice = rec._get_account_moves_lines_noinvoice()
+            for line in moves_lines_noinvoice:
+                rec._create_mod140_noinvoice_records(line)
 
     @api.multi
     def button_cancel(self):
