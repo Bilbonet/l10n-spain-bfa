@@ -19,6 +19,10 @@ Este módulo inluye las siguientes modificaciones.
 
 * En libro de iva añade el mapeo a los impuestos de gastos
 
+* Añade un nuevo diario de gastos para controlar por separado la secuencia de las facturas de gasto de las de compra
+
+* Añade una nueva secuencia para las facturas de gasto
+
 Configuración
 =============
 

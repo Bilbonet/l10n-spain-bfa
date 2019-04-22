@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="es_bfa_expenses_journal_sequence" model="ir.sequence">
+        <field name="name">Gastos Facturas (BFA)</field>
+        <field eval="4" name="padding"/>
+        <field name="implementation">no_gap</field>
+        <field name="prefix">GAS%(range_y)s</field>
+        <field name="active" eval="1"/>
+        <field name="use_date_range" eval="1"/>
+        <field name="company_id" eval="False"/>
+    </record>
+
+</odoo>

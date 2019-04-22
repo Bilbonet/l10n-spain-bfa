@@ -14,6 +14,8 @@
     ],
     'data': [
         'data/account_tax_data.xml',
+        'data/sequence_data.xml',
+        'data/account_journal_data.xml',
     ],
     'installable': True,
 }
