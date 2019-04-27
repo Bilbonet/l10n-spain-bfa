@@ -39,17 +39,4 @@
         <field name="tax_group_id" ref="l10n_es.tax_group_iva_4"/>
     </record>
 
-    <!--
-       Mapeo Impuestos Gastos en el Libro de IVA - 340
-   -->
-    <record id="aeat_vat_book_map_line_GASTO" model="l10n.es.aeat.map.tax.line">
-        <field name="field_number">15</field>
-        <field name="map_parent_id" ref="l10n_es_vat_book.aeat_vat_book_map"/>
-        <field name="tax_ids" eval="[(6, 0, [
-            ref('l10n_es_bfa.account_tax_template_g_iva21_bc'),
-            ref('l10n_es_bfa.account_tax_template_g_iva10_bc'),
-            ref('l10n_es_bfa.account_tax_template_g_iva4_bc'),
-        ])]"/>
-        <field name="name">SuministroFactRecibidas Gastos</field>
-    </record>
 </odoo>

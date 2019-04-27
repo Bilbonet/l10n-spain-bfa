@@ -17,8 +17,6 @@ Este módulo inluye las siguientes modificaciones.
 * En la declaración de IVA se debe informar por separada las compras y los gastos.
   En la plantilla de impuestos del (PGC) creamos nuevos tipos de impuestos para los gastos.
 
-* En libro de iva añade el mapeo a los impuestos de gastos
-
 * Añade un nuevo diario de gastos para controlar por separado la secuencia de las facturas de gasto de las de compra
 
 * Añade una nueva secuencia para las facturas de gasto
