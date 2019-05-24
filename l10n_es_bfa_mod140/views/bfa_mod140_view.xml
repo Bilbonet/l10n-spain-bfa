@@ -167,7 +167,7 @@
     </record>
 
     <record id="l10n_es_bfa_mod140_action" model="ir.actions.act_window">
-        <field name="name">Modelo 140</field>
+        <field name="name">Modelo 140 Declaración</field>
         <field name="res_model">l10n.es.bfa.mod140</field>
         <field name="view_mode">tree,form</field>
         <field name="help" type="html">

@@ -28,6 +28,7 @@
         'views/bfa_mod140_summary_view.xml',
         'views/bfa_mod140_tax_summary_view.xml',
         'views/bfa_mod140_line_noinvoice_view.xml',
+        'views/bfa_mod140_asset_view.xml',
         'report/common_templates.xml',
         'report/bfa_mod140_report.xml',
         'report/bfa_mod140_invoices_issued_report.xml',
