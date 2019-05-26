@@ -46,6 +46,7 @@
                             <field name="date_operation" string="Fecha operación"/>
                         </group>
                     </group>
+                    <hr style="margin: 0px;"/>
                     <group>
                         <group>
                             <field name="date_start"/>

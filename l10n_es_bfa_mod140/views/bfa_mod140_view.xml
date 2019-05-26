@@ -159,6 +159,12 @@
                                 <field name="noinvoice_ids" nolabel="1"/>
                             </group>
                         </page>
+
+                        <page name="expenses_asset_statement" string="Assets in the statement">
+                            <group name="assets_statement" string="Assets">
+                                <field name="asset_ids" nolabel="1"/>
+                            </group>
+                        </page>
                     </notebook>
 
                 </sheet>

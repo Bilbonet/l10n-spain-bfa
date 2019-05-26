@@ -311,6 +311,11 @@ class L10nEsBfaMod140(models.Model):
         string='Expenses without invoice',
         copy=False,
         readonly="True")
+    asset_ids = fields.One2many(
+        comodel_name='l10n.es.bfa.mod140.asset.statement',
+        inverse_name='mod140_id',
+        string='Assets in this statement',
+        copy=False)
 
     _sql_constraints = [
         ('name_uniq', 'unique(name, company_id)',
@@ -482,21 +487,6 @@ class L10nEsBfaMod140(models.Model):
     def _create_mod140_summary(self, tax_summary_recs, book_type):
         vals = self._prepare_mod140_summary(tax_summary_recs, book_type)
         self.env['l10n.es.bfa.mod140.summary'].create(vals)
-
-    @api.multi
-    def button_calculate(self):
-        self.write({'state': 'calculated',
-                    'calculation_date': fields.Datetime.now()})
-        """
-            Funcion call from mod140
-        """
-        self._calculate_mod140()
-        return True
-
-    @api.multi
-    def button_recalculate(self):
-        # self.write({'calculation_date': fields.Datetime.now()})
-        return self.button_calculate()
 
     def _get_vals_invoice_line(self, move, line_type):
         """
@@ -746,6 +736,71 @@ class L10nEsBfaMod140(models.Model):
 
         return mod140_line_obj.create(vals)
 
+    # ----------------------------------
+    # Assets in the statement
+    # ----------------------------------
+    def _get_account_invoice_assets(self):
+        aia_obj = self.env['account.invoice']
+        invoices = aia_obj.search([
+            ('date', '>=', self.date_start),
+            ('date', '<=', self.date_end),
+            ('type', '=', 'in_invoice'),
+            ('use_mod140_asset', '=', True),
+            ('mod140_asset_id', '!=', False)])
+
+        # Obtain de Assets used in invoices
+        assets = invoices.mapped('mod140_asset_id')
+
+        return assets
+
+    def _create_mod140_asset_statement_records(self, asset):
+        """
+            This function create a new record in Asset statement
+
+            Args:
+                asset: asset_id
+        """
+
+        mod140_asset_obj = self.env['l10n.es.bfa.mod140.asset.statement']
+        """
+           Make the dictionary to create a new record in
+           Asset Estatement
+        """
+        vals = {
+            'mod140_id': self.id,
+            'asset_id': asset.id,
+        }
+
+        exception_text = ""
+        exception = False
+        # here any logic to evaluate exceptions
+
+        if exception:
+            vals.update({
+                'exception': True,
+                'exception_text': exception_text,
+            })
+
+        return mod140_asset_obj.create(vals)
+
+    # ----------------------------------
+    # Actions - Buttons
+    # ----------------------------------
+    @api.multi
+    def button_calculate(self):
+        self.write({'state': 'calculated',
+                    'calculation_date': fields.Datetime.now()})
+        """
+            Funcion call from mod140
+        """
+        self._calculate_mod140()
+        return True
+
+    @api.multi
+    def button_recalculate(self):
+        # self.write({'calculation_date': fields.Datetime.now()})
+        return self.button_calculate()
+
     def _clear_old_data(self):
         """
             This function clean all the old data to make a new calculation
@@ -754,6 +809,7 @@ class L10nEsBfaMod140(models.Model):
         self.summary_ids.unlink()
         self.tax_summary_ids.unlink()
         self.noinvoice_ids.unlink()
+        self.asset_ids.unlink()
 
     def _calculate_mod140(self):
         """
@@ -844,6 +900,12 @@ class L10nEsBfaMod140(models.Model):
             moves_lines_noinvoice = rec._get_account_moves_lines_noinvoice()
             for line in moves_lines_noinvoice:
                 rec._create_mod140_noinvoice_records(line)
+
+            # Assets in the statement
+            account_invoice_assets = rec._get_account_invoice_assets()
+            for asset in account_invoice_assets:
+                rec._create_mod140_asset_statement_records(asset)
+
 
     @api.multi
     def button_cancel(self):
