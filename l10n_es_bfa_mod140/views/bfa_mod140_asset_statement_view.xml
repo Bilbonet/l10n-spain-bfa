@@ -8,10 +8,11 @@
       <form string="Assets in the statement">
         <sheet>
           <group name="main">
-              <field name="asset_id"/>
-              <field name="export" />
-              <field name="exception" />
-              <field name="exception_text"/>
+            <field name="ref"/>
+            <field name="asset_id"/>
+            <field name="export" />
+            <field name="exception" />
+            <field name="exception_text"/>
           </group>
         </sheet>
       </form>
@@ -23,6 +24,7 @@
     <field name="model">l10n.es.bfa.mod140.asset.statement</field>
     <field name="arch" type="xml">
       <tree string="Assets in the statement" colors="red:exception==True">
+        <field name="ref"/>
         <field name="asset_id"/>
         <field name="export" />
         <field name="exception"/>

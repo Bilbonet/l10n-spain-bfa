@@ -80,7 +80,7 @@
         <field name="sequence">7</field>
         <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
         <field name="name">Identificación de la actividad (discriminante)</field>
-        <field name="fixed_value">0</field>
+        <field name="fixed_value"></field>
         <field name="export_type">integer</field>
         <field name="apply_sign" eval="False"/>
         <field name="size">2</field>
@@ -168,17 +168,431 @@
         <field name="size">3</field>
         <field name="alignment">left</field>
     </record>
-
-
-
-
-
-
-
-
-    <!--          500         Fin de Registro. Constante CRLF para salto de linea -->
+    <!--          75-76       Alfanumérico    Domicilio: Siglas-->
+    <record id="bfa_mod140_assets_export_line_16" model="aeat.model.export.config.line">
+        <field name="sequence">16</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Domicilio: Siglas (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">2</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          77-106      Alfanumérico    Domicilio: Via-->
+    <record id="bfa_mod140_assets_export_line_17" model="aeat.model.export.config.line">
+        <field name="sequence">17</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Domicilio: Via (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">30</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          107-111     Alfanumérico    Domicilio: Número-->
+    <record id="bfa_mod140_assets_export_line_18" model="aeat.model.export.config.line">
+        <field name="sequence">18</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Domicilio: Número (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">5</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          112         Alfanumérico    Domicilio: Letra-->
+    <record id="bfa_mod140_assets_export_line_19" model="aeat.model.export.config.line">
+        <field name="sequence">19</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Domicilio: Letra (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">1</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          113-114     Alfanumérico    Domicilio: Piso-->
+    <record id="bfa_mod140_assets_export_line_20" model="aeat.model.export.config.line">
+        <field name="sequence">20</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Domicilio: Piso (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">2</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          115-116     Alfanumérico    Domicilio: Mano-->
+    <record id="bfa_mod140_assets_export_line_21" model="aeat.model.export.config.line">
+        <field name="sequence">21</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Domicilio: Mano (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">2</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          117-136     Alfanumérico    Domicilio: Municipio-->
+    <record id="bfa_mod140_assets_export_line_22" model="aeat.model.export.config.line">
+        <field name="sequence">22</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Domicilio: Municipio (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">20</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          137-141     Numérico        Domicilio: Código Postal-->
+    <record id="bfa_mod140_assets_export_line_23" model="aeat.model.export.config.line">
+        <field name="sequence">23</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Domicilio: Código Postal (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">integer</field>
+        <field name="apply_sign" eval="False"/>
+        <field name="size">5</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          142-143     Numérico        Domicilio: Código Provincia-->
+    <record id="bfa_mod140_assets_export_line_24" model="aeat.model.export.config.line">
+        <field name="sequence">24</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Domicilio: Código Provincia (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">integer</field>
+        <field name="apply_sign" eval="False"/>
+        <field name="size">2</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          144         Alfanumérico    Marca Referencia catastral inexistente-->
+    <record id="bfa_mod140_assets_export_line_25" model="aeat.model.export.config.line">
+        <field name="sequence">25</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Marca Referencia catastral inexistente (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">1</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          145-164     Alfanumérico    Referencia Catastral-->
+    <record id="bfa_mod140_assets_export_line_26" model="aeat.model.export.config.line">
+        <field name="sequence">26</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Referencia Catastral (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">20</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          165         Alfanumérico    Signo importe valor suelo-->
+    <!--          166-178     Numérico        Importe valor suelo-->
+    <record id="bfa_mod140_assets_export_line_27" model="aeat.model.export.config.line">
+        <field name="sequence">27</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Signo / Importe Valor Suelo (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">float</field>
+        <field name="apply_sign" eval="True"/>
+        <field name="positive_sign"> </field>
+        <field name="negative_sign">N</field>
+        <field name="size">14</field>
+        <field name="decimal_size">2</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          179         Alfanumérico    Signo importe valor construccion-->
+    <!--          180-192     Numérico        Importe valor construccion-->
+    <record id="bfa_mod140_assets_export_line_28" model="aeat.model.export.config.line">
+        <field name="sequence">28</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Signo / Importe Valor Construccion (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">float</field>
+        <field name="apply_sign" eval="True"/>
+        <field name="positive_sign"> </field>
+        <field name="negative_sign">N</field>
+        <field name="size">14</field>
+        <field name="decimal_size">2</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          193         Alfanumérico    Tipo Vehiculo-->
+    <record id="bfa_mod140_assets_export_line_29" model="aeat.model.export.config.line">
+        <field name="sequence">29</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Tipo Vehiculo (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">1</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          194-201     Alfanumérico    Matrícula-->
+    <record id="bfa_mod140_assets_export_line_30" model="aeat.model.export.config.line">
+        <field name="sequence">30</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Matrícula (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">8</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          202-210     Numérico        Número de teléfono-->
+    <record id="bfa_mod140_assets_export_line_31" model="aeat.model.export.config.line">
+        <field name="sequence">31</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Número de teléfono (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">integer</field>
+        <field name="apply_sign" eval="False"/>
+        <field name="size">9</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          211-260     Alfanumérico    Descripción adicional cuenta-->
+    <record id="bfa_mod140_assets_export_line_32" model="aeat.model.export.config.line">
+        <field name="sequence">32</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Descripción adicional cuenta (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">50</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          261         Alfanumérico    Motivo Baja o Regularización-->
+    <record id="bfa_mod140_assets_export_line_33" model="aeat.model.export.config.line">
+        <field name="sequence">33</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Motivo Baja o Regularización (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">1</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          262-311     Alfanumérico    Descripción Motivo Baja o Regularización-->
+    <record id="bfa_mod140_assets_export_line_34" model="aeat.model.export.config.line">
+        <field name="sequence">34</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Descripción Motivo Baja o Regularización</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">50</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          312-317     Numérico        Número anotación capitulo ingresos y facturas emitidas-->
+    <record id="bfa_mod140_assets_export_line_35" model="aeat.model.export.config.line">
+        <field name="sequence">35</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Número anotación capitulo ingresos y facturas emitidas (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">integer</field>
+        <field name="apply_sign" eval="False"/>
+        <field name="size">6</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          318-337     Alfanumérico    Identificación de la factura o justificante-->
+    <record id="bfa_mod140_assets_export_line_36" model="aeat.model.export.config.line">
+        <field name="sequence">36</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Identificación de la factura o justificante</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">20</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          338-342     Numérico        Porcentaje de afectación IRPF-->
+    <record id="bfa_mod140_assets_export_line_37" model="aeat.model.export.config.line">
+        <field name="sequence">37</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Porcentaje de afectación IRPF (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">integer</field>
+        <field name="apply_sign" eval="False"/>
+        <field name="size">5</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          343         Alfanumérico    Signo importe Valor Amotizable-->
+    <!--          344-356     Numérico        Importe Valor Amortizable-->
+    <record id="bfa_mod140_assets_export_line_38" model="aeat.model.export.config.line">
+        <field name="sequence">38</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Signo / Importe Valor Amortizable (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">float</field>
+        <field name="apply_sign" eval="True"/>
+        <field name="positive_sign"> </field>
+        <field name="negative_sign">N</field>
+        <field name="size">14</field>
+        <field name="decimal_size">2</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          357         Numérico        Sistema de Amortización-->
+    <record id="bfa_mod140_assets_export_line_39" model="aeat.model.export.config.line">
+        <field name="sequence">39</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Sistema de Amortización (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">integer</field>
+        <field name="apply_sign" eval="False"/>
+        <field name="size">1</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          358         Alfanumérico    Signo Importe Amortización Acumulada-->
+    <!--          359-371     Numérico        Importe Amortización Acumulada-->
+    <record id="bfa_mod140_assets_export_line_40" model="aeat.model.export.config.line">
+        <field name="sequence">40</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Signo / Importe Valor Amortizable (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">float</field>
+        <field name="apply_sign" eval="True"/>
+        <field name="positive_sign"> </field>
+        <field name="negative_sign">N</field>
+        <field name="size">14</field>
+        <field name="decimal_size">2</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          372         Alfanumérico    Signo Importe Amortización Ejercicio-->
+    <!--          373-385     Numérico        Importe Amortización Ejercicio-->
+    <record id="bfa_mod140_assets_export_line_41" model="aeat.model.export.config.line">
+        <field name="sequence">41</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Signo / Importe Amortización Ejercicio (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">float</field>
+        <field name="apply_sign" eval="True"/>
+        <field name="positive_sign"> </field>
+        <field name="negative_sign">N</field>
+        <field name="size">14</field>
+        <field name="decimal_size">2</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          386         Alfanumérico    Signo Importe Amortización Pendiente-->
+    <!--          387-399     Numérico        Importe Amortización Pendiente-->
+    <record id="bfa_mod140_assets_export_line_42" model="aeat.model.export.config.line">
+        <field name="sequence">42</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Signo / Importe Amortización Pendiente (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">float</field>
+        <field name="apply_sign" eval="True"/>
+        <field name="positive_sign"> </field>
+        <field name="negative_sign">N</field>
+        <field name="size">14</field>
+        <field name="decimal_size">2</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          400-402     Numérico        Número de días-->
+    <record id="bfa_mod140_assets_export_line_43" model="aeat.model.export.config.line">
+        <field name="sequence">43</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Número de días (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">integer</field>
+        <field name="apply_sign" eval="False"/>
+        <field name="size">3</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          403-406     Numérico        Año inicio utilización-->
+    <record id="bfa_mod140_assets_export_line_44" model="aeat.model.export.config.line">
+        <field name="sequence">44</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Año inicio utilización (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">integer</field>
+        <field name="apply_sign" eval="False"/>
+        <field name="size">4</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          407-409     Numérico        Porcentaje Prorrata Año Inicio-->
+    <record id="bfa_mod140_assets_export_line_45" model="aeat.model.export.config.line">
+        <field name="sequence">45</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Porcentaje Prorrata Año Inicio (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">integer</field>
+        <field name="apply_sign" eval="False"/>
+        <field name="size">3</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          410-412     Numérico        Porcentaje Prorrata anual definitiva-->
+    <record id="bfa_mod140_assets_export_line_46" model="aeat.model.export.config.line">
+        <field name="sequence">46</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Porcentaje Prorrata anual definitiva (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">integer</field>
+        <field name="apply_sign" eval="False"/>
+        <field name="size">3</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          413         Alfanumérico    Signo Importe Regularización anual de la deducción-->
+    <!--          414-426     Numérico        Importe Regularización anual de la deducción-->
+    <record id="bfa_mod140_assets_export_line_47" model="aeat.model.export.config.line">
+        <field name="sequence">47</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Signo / Importe Regularización anual de la deducción (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">float</field>
+        <field name="apply_sign" eval="True"/>
+        <field name="positive_sign"> </field>
+        <field name="negative_sign">N</field>
+        <field name="size">14</field>
+        <field name="decimal_size">2</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          427         Alfanumérico    Signo Importe Regularización de la deducción efectuada (Transmisiones)-->
+    <!--          428-440     Numérico        Importe Regularización de la deducción efectuada (Transmisiones)-->
+    <record id="bfa_mod140_assets_export_line_48" model="aeat.model.export.config.line">
+        <field name="sequence">48</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Signo / Importe Regularización de la deducción efectuada (Transmisiones) (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">float</field>
+        <field name="apply_sign" eval="True"/>
+        <field name="positive_sign"> </field>
+        <field name="negative_sign">N</field>
+        <field name="size">14</field>
+        <field name="decimal_size">2</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          441         Alfanumérico    Marca Anotación registral Rectificada-->
+    <record id="bfa_mod140_assets_export_line_49" model="aeat.model.export.config.line">
+        <field name="sequence">49</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Marca Anotación registral Rectificada (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">1</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          442-445     Numérico        Ejercicio anotación registral rectificada-->
     <record id="bfa_mod140_assets_export_line_50" model="aeat.model.export.config.line">
         <field name="sequence">50</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Ejercicio anotación registral rectificada (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">integer</field>
+        <field name="apply_sign" eval="False"/>
+        <field name="size">4</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          446-451     Numérico        Número anotación registral rectificada-->
+    <record id="bfa_mod140_assets_export_line_51" model="aeat.model.export.config.line">
+        <field name="sequence">51</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Número anotación registral rectificada (no se contempla)</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">integer</field>
+        <field name="apply_sign" eval="False"/>
+        <field name="size">6</field>
+        <field name="alignment">right</field>
+    </record>
+    <!--          452-499     Alfanumérico    Filler-->
+    <record id="bfa_mod140_assets_export_line_52" model="aeat.model.export.config.line">
+        <field name="sequence">52</field>
+        <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
+        <field name="name">Blancos</field>
+        <field name="fixed_value"></field>
+        <field name="export_type">string</field>
+        <field name="size">48</field>
+        <field name="alignment">left</field>
+    </record>
+    <!--          500         Fin de Registro. Constante CRLF para salto de linea -->
+    <record id="bfa_mod140_assets_export_line_53" model="aeat.model.export.config.line">
+        <field name="sequence">53</field>
         <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
         <field name="name">Fin de Registro. Constante CRLF (Hexadecimal 0D0A, Decimal 1310)</field>
         <field name="expression">${"\r\n".encode("ascii")}</field>

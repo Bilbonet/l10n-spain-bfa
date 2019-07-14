@@ -13,7 +13,12 @@ class L10nEsBfaMod140AssetStatement(models.Model):
         string='Modelo 140 id', ondelete='cascade')
     asset_id = fields.Many2one(
         comodel_name='l10n.es.bfa.mod140.asset',
-        string='Asset')
-    export = fields.Boolean(string="Export", default=True)
+        string='Asset Name')
+    ref = fields.Char(related='asset_id.ref',
+                      strig='Asset Reference', readonly=True)
+    export = fields.Boolean(
+        string="Export", default=True,
+        help='You can decide if export the asset in the export '
+             'file for BFA declaration')
     exception = fields.Boolean(string="Exception")
     exception_text = fields.Char(string="Exception text")
