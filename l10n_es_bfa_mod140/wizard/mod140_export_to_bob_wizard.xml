@@ -1,5 +1,9 @@
 <?xml version="1.0"?>
 <odoo>
+    <!--
+        El Wizard llama al proceso de exportación del módulo [l10n_es_aeat].
+        De momento no es necesario implementa nuestro propio proceso de exportación.
+    -->
     <record id="bfa_export_wizard" model="ir.ui.view">
         <field name="name">Export BFA BOB file</field>
         <field name="model">l10n.es.aeat.report.export_to_boe</field>
@@ -28,7 +32,7 @@
     </record>
 
     <record id="bfa_mod140_export_action_wizard" model="ir.actions.act_window">
-        <field name="name">Export BFA BOE file</field>
+        <field name="name">Export BFA BOB file</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">l10n.es.aeat.report.export_to_boe</field>
         <field name="view_type">form</field>
@@ -40,58 +44,5 @@
         <field name="view_mode">form</field>
         <field name="view_id" ref="l10n_es_bfa_mod140.bfa_export_wizard"/>
     </record>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!--<record id="bfa_export_wizard" model="ir.ui.view">-->
-        <!--<field name="name">Export BFA BOB file</field>-->
-        <!--<field name="model">l10n.es.bfa.mod140.report.export_to_bob</field>-->
-        <!--<field name="arch" type="xml">-->
-            <!--<form string="Export BFA BOB file" version="7.0">-->
-                <!--<field invisible="1" name="state"/>-->
-                <!--<field name="name" invisible="1"/>-->
-                <!--<div states="open">-->
-                    <!--<p>Pulse el botón <strong>Exportar</strong> para iniciar el proceso de exportación del archivo BOB de la BFA.</p>-->
-                <!--</div>-->
-                <!--<div states="get">-->
-                    <!--<h2>Exportación completada</h2>-->
-                    <!--<p>Aquí está el archivo BOB de la BFA exportado: <field name="data" readonly="1" filename="name"/></p>-->
-                    <!--<p>Ponga este archivo dentro de su carpeta personal de la BFA, y úselo en el programa <strong>Informativas</strong>.</p>-->
-                <!--</div>-->
-                <!--<footer states="open">-->
-                    <!--<button name="action_get_file" string="Export" type="object" class="oe_highlight"/>-->
-                    <!--<label string="or"/>-->
-                    <!--<button special="cancel" string="Cancel" type="object" class="oe_link"/>-->
-                <!--</footer>-->
-                <!--<footer states="get">-->
-                    <!--<button special="cancel" string="Close" type="object"/>-->
-                <!--</footer>-->
-            <!--</form>-->
-        <!--</field>-->
-    <!--</record>-->
-
-    <!--<record id="bfa_mod140_export_action_wizard" model="ir.actions.act_window">-->
-        <!--<field name="name">Export BFA BOE file</field>-->
-        <!--<field name="type">ir.actions.act_window</field>-->
-        <!--<field name="res_model">l10n.es.bfa.mod140.report.export_to_bob</field>-->
-        <!--<field name="view_type">form</field>-->
-        <!--<field name="view_mode">form</field>-->
-        <!--<field name="target">new</field>-->
-    <!--</record>-->
-    <!--<record id="bfa_mod140_export_action_form" model="ir.actions.act_window.view">-->
-        <!--<field name="act_window_id" ref="bfa_mod140_export_action_wizard"/>-->
-        <!--<field name="view_mode">form</field>-->
-        <!--<field name="view_id" ref="l10n_es_bfa_mod140.bfa_export_wizard"/>-->
-    <!--</record>-->
 
 </odoo>

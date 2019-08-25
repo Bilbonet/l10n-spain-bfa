@@ -30,12 +30,13 @@
                     </div>
                     <div class="oe_title">
                         <h1 class="o_row">
-                            <field name="ref" placeholder="Código único para el bien"/>
+                            <label string="Referencia "/>
+                            <field name="ref" placeholder="Referencia única para el bien"/>
                         </h1>
                     </div>
                     <div class="oe_title">
                         <h1>
-                            <field name="name" placeholder="Pequeña descripción del bien"/>
+                            <field name="name" placeholder="Breve descripción del bien"/>
                         </h1>
                     </div>
                     <group>
@@ -57,6 +58,13 @@
                             <field name="account_pgc"/>
                         </group>
                     </group>
+                    <hr style="margin: 10px;"/>
+                    <p>
+                        <ul>
+                            <li>Solo se dan de alta los campos obligatorios para la importación. El resto de datos se cumplimentan en la aplicación BILA.</li>
+                            <li>Si ya están creados estos bienes en la aplicación de BILA, <strong>es importante que coincida la referencia.</strong></li>
+                        </ul>
+                    </p>
                 </sheet>
             </form>
         </field>

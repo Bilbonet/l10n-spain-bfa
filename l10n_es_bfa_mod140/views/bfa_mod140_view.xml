@@ -2,7 +2,7 @@
 <odoo>
 
     <menuitem id="menu_l10n_es_bfa"
-              parent="account.menu_finance_entries"
+              parent="l10n_es_aeat.menu_root_aeat"
               sequence="55"
               groups="account.group_account_manager"
               name="BFA"/>
@@ -199,6 +199,7 @@
 
     <menuitem id="menu_l10n_es_bfa_mod140_report"
               parent="menu_l10n_es_bfa"
+              sequence="3"
               action="l10n_es_bfa_mod140_action"
               name="Declaración Modelo 140"/>
 
