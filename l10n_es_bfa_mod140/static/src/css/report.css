@@ -1,0 +1,7 @@
+.o_bfa_mod140_web_action {
+    color: blue;
+}
+.underline-on-hover:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

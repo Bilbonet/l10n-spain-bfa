@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="l10n_es_bfa_mod140_asset_tree_view" model="ir.ui.view">
+        <field name="name">l10n_es_bfa_mod140_asset.tree</field>
+        <field name="model">l10n.es.bfa.mod140.asset</field>
+        <field name="arch" type="xml">
+            <tree string="BFA Declaración Bienes">
+                <field name="ref"/>
+                <field name="name"/>
+                <field name="date_start"/>
+                <field name="type_asset"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="l10n_es_bfa_mod140_asset_form_view" model="ir.ui.view">
+        <field name="name">l10n_es_bfa_mod140_asset.form</field>
+        <field name="model">l10n.es.bfa.mod140.asset</field>
+        <field name="arch" type="xml">
+            <form string="BFA Declaración Bien">
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="toggle_active" type="object"
+                                class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button"
+                                   options='{"terminology": "archive"}'/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1 class="o_row">
+                            <label string="Referencia "/>
+                            <field name="ref" placeholder="Referencia única para el bien"/>
+                        </h1>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Breve descripción del bien"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="type_operation" string="Tipo Operación"/>
+                        </group>
+                        <group>
+                            <field name="date_operation" string="Fecha operación"/>
+                        </group>
+                    </group>
+                    <hr style="margin: 0px;"/>
+                    <group>
+                        <group>
+                            <field name="date_start"/>
+                            <field name="type_asset"/>
+                        </group>
+                        <group>
+                            <field name="titularity" widget="radio"/>
+                            <field name="account_pgc"/>
+                        </group>
+                    </group>
+                    <hr style="margin: 10px;"/>
+                    <p>
+                        <ul>
+                            <li>Solo se dan de alta los campos obligatorios para la importación. El resto de datos se cumplimentan en la aplicación BILA.</li>
+                            <li>Si ya están creados estos bienes en la aplicación de BILA, <strong>es importante que coincida la referencia.</strong></li>
+                        </ul>
+                    </p>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="l10n_es_bfa_mod140_asset_action" model="ir.actions.act_window">
+        <field name="name">Modelo 140 Asset</field>
+        <field name="res_model">l10n.es.bfa.mod140.asset</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click para crear un nuevo bien.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="l10n_es_bfa_mod140_asset_menu"
+              parent="menu_l10n_es_bfa"
+              sequence="2"
+              action="l10n_es_bfa_mod140_asset_action"
+              name="Bienes Modelo 140"/>
+
+</odoo>

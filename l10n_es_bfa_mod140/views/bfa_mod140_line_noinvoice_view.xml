@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<odoo>
+
+  <record id="l10n_es_bfa_mod140_line_noinvoice_form_view" model="ir.ui.view">
+    <field name="name">l10n_es_bfa_mod140.line.noinvoice.form</field>
+    <field name="model">l10n.es.bfa.mod140.line.noinvoice</field>
+    <field name="arch" type="xml">
+      <form string="Expenses without invoice">
+        <sheet>
+          <group name="main">
+              <field name="ref"/>
+              <field name="move_id" />
+              <field name="move_line_id" />
+              <field name="date" />
+              <field name="account_pgc" />
+              <field name="amount" />
+              <field name="exception" />
+              <field name="exception_text"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <record id="l10n_es_bfa_mod140_line_noinvoice_tree_view" model="ir.ui.view">
+    <field name="name">l10n_es_bfa_mod140.line.noinvoice.tree</field>
+    <field name="model">l10n.es.bfa.mod140.line.noinvoice</field>
+    <field name="arch" type="xml">
+      <tree string="Expenses without invoices" colors="red:exception==True">
+        <field name="ref"/>
+        <field name="move_id" />
+        <field name="date" />
+        <field name="account_pgc" />
+        <field name="amount" />
+        <field name="exception" />
+        <field name="exception_text"/>
+      </tree>
+    </field>
+  </record>
+</odoo>

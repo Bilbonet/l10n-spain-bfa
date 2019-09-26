@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <menuitem id="menu_l10n_es_bfa"
+              parent="l10n_es_aeat.menu_root_aeat"
+              sequence="55"
+              groups="account.group_account_manager"
+              name="BFA"/>
+
+    <record id="l10n_es_bfa_mod140_tree_view" model="ir.ui.view">
+        <field name="name">l10n_es_bfa_mod140.tree</field>
+        <field name="model">l10n.es.bfa.mod140</field>
+        <field name="arch" type="xml">
+            <tree string="BFA Declaración">
+                <field name="name"/>
+                <field name="year"/>
+                <field name="period_type"/>
+                <field name="state"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="l10n_es_bfa_mod140_form_view" model="ir.ui.view">
+        <field name="name">l10n_es_bfa_mod140.form</field>
+        <field name="model">l10n.es.bfa.mod140</field>
+        <field name="arch" type="xml">
+            <form string="BFA Declaración">
+                <header>
+                    <button name="button_calculate" string="Calculate" type="object" states="draft" icon="fa-cogs"/>
+                    <button name="button_recalculate" string="Recalculate" type="object" states="calculated" icon="fa-refresh"/>
+                    <button name="button_recover" string="Draft" type="object" states="cancelled" icon="fa-undo"/>
+                    <button name="button_cancel" string="Cancel" type="object" states="calculated,done" icon="fa-times"/>
+                    <button name="view_issued_invoices" string="View Issued Invoices" type="object" attrs="{'invisible':[('state', '=', 'draft')]}"/>
+                    <button name="view_received_invoices" string="View Received Invoices" type="object" attrs="{'invisible':[('state', '=', 'draft')]}"/>
+                    <button name="%(bfa_mod140_export_action_wizard)d" type="action" string="Export to BOE" states="calculated,done" icon="fa-share"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,calculated,done,cancelled"
+                           statusbar_colors="{'cancelled': 'red', 'done': 'blue', 'posted': 'blue'}"/>
+                </header>
+                <sheet>
+                    <field name="currency_id" invisible="1"/>
+                    <h1>
+                        <label string="Report "/>
+                        <field name="name" class="oe_inline" readonly="1"/>
+                    </h1>
+                    <group>
+                        <group name="group_declaration" string="Declaration">
+                            <field name="company_vat" required="1"/>
+                            <field name="year"/>
+                            <field name="period_type"/>
+                            <label for="date_start" string="Dates"/>
+                            <div>
+                                <field name="date_start" class="oe_inline"/>
+                                <span class="oe_inline"> - </span>
+                                <field name="date_end" class="oe_inline"/>
+                            </div>
+                            <field name="export_config_id" groups="base.group_no_one"/>
+                        </group>
+                        <group name="group_declarant_data" string="Declarant Data">
+                            <field name="declarant_name"/>
+                            <label string="Phone / Mobile "/>
+                            <div class="o_row">
+                                <field name="declarant_phone" nolabel="1"/>
+                                <field name="declarant_mobile" nolabel="1"/>
+                            </div>
+                            <field name="declarant_email"/>
+                            <field name="representative_vat"/>
+                            <field name="representative_name"/>
+                        </group>
+
+                        <group name="group_other_data" string="Other data">
+                            <field name="company_id" required="1"/>
+                            <field name="type"/>
+                            <field name="size"/>
+                            <field name="amortization" attrs="{'invisible':[('size','==','P')]}"/>
+                        </group>
+                        <group name="group_contact_data" string="Contact data">
+                            <field name="contact_type"/>
+                            <field name="contact_name"/>
+                            <label string="Phone / Mobile"/>
+                            <div class="o_row">
+                                <field name="contact_phone" nolabel="1"/>
+                                <field name="contact_mobile" nolabel="1"/>
+                            </div>
+                            <field name="contact_email"/>
+                        </group>
+                    </group>
+
+                    <notebook>
+                        <page name="activity" string="Activity">
+                            <group>
+                                <group name="group_activity_data" string="Activity data">
+                                    <field name="epigraph"/>
+                                    <label string="Activity Start/End"/>
+                                    <div class="o_row">
+                                        <field name="activity_start" nolabel="1"/>
+                                        <field name="activity_end" nolabel="1"/>
+                                    </div>
+                                    <field name="partner_id" string="Domicile activity"/>
+                                </group>
+                                <group name="group_regime_irpf" string="Net income regime IRPF">
+                                    <field name="regime_irpf"/>
+                                    <field name="eds_irpf" attrs="{'invisible':[('regime_irpf','==','N')]}"/>
+                                </group>
+                                <group name="group_regime_vat" string="Regime VAT">
+                                    <field name="reg_general"/>
+                                    <field name="reg_simplified"/>
+                                    <field name="reg_agp"/>
+                                    <field name="reg_equi"/>
+                                    <field name="reg_cash_criterion"/>
+                                    <field name="reg_others"/>
+                                </group>
+                                <group name="group_prorate_vat" string="Prorate VAT">
+                                    <label string="Prorate general"/>
+                                    <div class="o_row">
+                                        <field name="pro_general"/>
+                                        <field name="pro_general_percent" attrs="{'invisible':[('pro_general','=',False)]}" widget="percentage"/>
+                                        <label string="%" attrs="{'invisible':[('pro_general','=',False)]}"/>
+                                    </div>
+                                    <field name="pro_special"/>
+                                    <field name="all_exempt"/>
+                                </group>
+                            </group>
+                        </page>
+
+                        <page name="invoices_issued" string="Issued Invoices">
+                            <group name="issued_invoices" string="Issued Invoices">
+                                <field name="issued_line_ids" nolabel="1"/>
+                            </group>
+                            <group name="issued_rectification_invoices" string="Issued Refund Invoices">
+                                <field name="rectification_issued_line_ids" nolabel="1"/>
+                            </group>
+                            <group name="issued_tax_summary" string="Tax summary">
+                                <field name="issued_tax_summary_ids" nolabel="1"/>
+                            </group>
+                            <group name="issued_summary" string="Summary">
+                                <field name="issued_summary_ids" nolabel="1"/>
+                            </group>
+                        </page>
+
+                        <page name="invoices_received" string="Received Invoices">
+                            <group name="received_invoices" string="Received Invoices">
+                                <field name="received_line_ids" nolabel="1"/>
+                            </group>
+                            <group name="received_rectification_invoices" string="Received Refund Invoices">
+                                <field name="rectification_received_line_ids" nolabel="1"/>
+                            </group>
+                            <group name="received_tax_summary" string="Tax summary">
+                                <field name="received_tax_summary_ids" nolabel="1"/>
+                            </group>
+                            <group name="received_summary" string="Summary">
+                                <field name="received_summary_ids" nolabel="1"/>
+                            </group>
+                        </page>
+
+                        <page name="expenses_no_invoice" string="Expenses Without Invoice">
+                            <group name="received_invoices" string="Expenses">
+                                <field name="noinvoice_ids" nolabel="1"/>
+                            </group>
+                        </page>
+
+                        <page name="expenses_asset_statement" string="Assets in the statement">
+                            <group name="assets_statement" string="Assets">
+                                <field name="asset_ids" nolabel="1"/>
+                            </group>
+                        </page>
+                    </notebook>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="l10n_es_bfa_mod140_action" model="ir.actions.act_window">
+        <field name="name">Modelo 140 Declaración</field>
+        <field name="res_model">l10n.es.bfa.mod140</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click para crear una nueva declaración.
+            </p>
+        </field>
+    </record>
+
+    <record id="l10n_es_bfa_mod140_tree_action" model="ir.actions.act_window.view">
+        <field name="sequence" eval="2"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="l10n_es_bfa_mod140_tree_view"/>
+        <field name="act_window_id" ref="l10n_es_bfa_mod140_action"/>
+    </record>
+
+    <record id="l10n_es_bfa_mod140_form_action" model="ir.actions.act_window.view">
+        <field name="sequence" eval="3"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="l10n_es_bfa_mod140_form_view"/>
+        <field name="act_window_id" ref="l10n_es_bfa_mod140_action"/>
+    </record>
+
+    <menuitem id="menu_l10n_es_bfa_mod140_report"
+              parent="menu_l10n_es_bfa"
+              sequence="3"
+              action="l10n_es_bfa_mod140_action"
+              name="Declaración Modelo 140"/>
+
+</odoo>
