@@ -8,8 +8,8 @@
         <field name="name">Export BFA BOB file</field>
         <field name="model">l10n.es.aeat.report.export_to_boe</field>
         <field name="arch" type="xml">
-            <form string="Export BFA BOB file" version="7.0">
-                <field invisible="1" name="state"/>
+            <form string="Export BFA BOB file">
+                <field name="state" invisible="1"/>
                 <field name="name" invisible="1"/>
                 <div states="open">
                     <p>Pulse el botón <strong>Exportar</strong> para iniciar el proceso de exportación del archivo BOB de la BFA.</p>
@@ -21,7 +21,6 @@
                 </div>
                 <footer states="open">
                     <button name="action_get_file" string="Export" type="object" class="oe_highlight"/>
-                    <label string="or"/>
                     <button special="cancel" string="Cancel" type="object" class="oe_link"/>
                 </footer>
                 <footer states="get">

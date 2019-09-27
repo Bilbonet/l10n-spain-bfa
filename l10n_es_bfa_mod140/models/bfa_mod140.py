@@ -111,14 +111,14 @@ class L10nEsBfaMod140(models.Model):
         comodel_name='res.partner', string="Partner",
         related='company_id.partner_id', readonly=True)
     declarant_name = fields.Char(
-        string="Surnames, Name", size=40,
+        string="Declarant: Surnames, Name", size=40,
         help="Declarant full name, must have surnames, name.",
         required=True, readonly=True, states={'draft': [('readonly', False)]})
     declarant_phone = fields.Char(
-        string="Phone", size=9, required=True, readonly=True,
+        string="Declarant Phone", size=9, required=True, readonly=True,
         states={'draft': [('readonly', False)]})
     declarant_mobile = fields.Char(
-        string="Mobile", size=9, required=True, readonly=True,
+        string="Declarant Mobile", size=9, required=True, readonly=True,
         states={'draft': [('readonly', False)]})
     declarant_email = fields.Char(
         string="E-mail", size=50, required=True, readonly=True,
@@ -139,14 +139,14 @@ class L10nEsBfaMod140(models.Model):
         ], string="Contact Type", default='D', readonly=True, required=True,
         states={'draft': [('readonly', False)]})
     contact_name = fields.Char(
-        string="Surnames, Name", size=40,
+        string="Contact: Surnames, Name", size=40,
         help="Contact full name, must have surnames, name.",
         required=True, readonly=True, states={'draft': [('readonly', False)]})
     contact_phone = fields.Char(
-        string="Phone", size=9, required=True, readonly=True,
+        string="Contact Phone", size=9, required=True, readonly=True,
         states={'draft': [('readonly', False)]})
     contact_mobile = fields.Char(
-        string="Mobile", size=9, required=True, readonly=True,
+        string="Contact Mobile", size=9, required=True, readonly=True,
         states={'draft': [('readonly', False)]})
     contact_email = fields.Char(
         string="Contact email", size=50, required=True, readonly=True,
@@ -332,8 +332,8 @@ class L10nEsBfaMod140(models.Model):
             self.company_vat = self.normalize_vat(self.company_id.vat)
 
         #Declarant Data
-        self.declarant_name = self.env.user.partner_id.lastname + ', ' + \
-                              self.env.user.partner_id.firstname
+        self.declarant_name = str(self.env.user.partner_id.lastname) + ', ' + \
+                              str(self.env.user.partner_id.firstname)
         self.declarant_email = self.env.user.email
         self.declarant_phone = self._filter_phone(
             self.env.user.partner_id.phone or
@@ -345,8 +345,8 @@ class L10nEsBfaMod140(models.Model):
             self.env.user.company_id.phone)
 
         #Contact Data
-        self.contact_name = self.env.user.partner_id.lastname + ', ' + \
-                            self.env.user.partner_id.firstname
+        self.contact_name = str(self.env.user.partner_id.lastname) + ', ' + \
+                            str(self.env.user.partner_id.firstname)
         self.contact_email = self.env.user.email
         self.contact_phone = self._filter_phone(
             self.env.user.partner_id.phone or

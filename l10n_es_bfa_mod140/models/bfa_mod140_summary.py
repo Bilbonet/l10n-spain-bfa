@@ -6,6 +6,7 @@ from odoo import fields, models
 
 class L10nEsBfaMod140Summary(models.Model):
     _name = "l10n.es.bfa.mod140.summary"
+    _description = "BFA Model 140 Summary"
 
     mod140_id = fields.Many2one(
         comodel_name='l10n.es.bfa.mod140',

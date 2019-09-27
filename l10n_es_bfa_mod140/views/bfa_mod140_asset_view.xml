@@ -30,7 +30,7 @@
                     </div>
                     <div class="oe_title">
                         <h1 class="o_row">
-                            <label string="Referencia "/>
+                            <label for="ref" string="Referencia "/>
                             <field name="ref" placeholder="Referencia única para el bien"/>
                         </h1>
                     </div>

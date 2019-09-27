@@ -11,7 +11,7 @@
         </xpath>
     </template>
 
-    <template id="l10n_es_bfa.mod140_dates">
+    <template id="l10n_es_bfa_mod140.mod140_dates">
           <div class="col-xs-12 text-center" id="dates_div">
               <table class="detail_table" id="fiscal_periods_table">
                   <tbody class="invoice_tbody">
@@ -44,7 +44,7 @@
         </div>
     </template>
 
-    <template id="l10n_es_bfa.mod140_contact">
+    <template id="l10n_es_bfa_mod140.mod140_contact">
         <div class="col-xs-12 text-center" id="vat_book_contact_div">
           <table class="detail_table" id="vat_book_contact_table">
               <tbody class="invoice_tbody">
@@ -77,7 +77,7 @@
         </div>
     </template>
 
-    <template id="l10n_es_bfa.mod140_invoices_head">
+    <template id="l10n_es_bfa_mod140.mod140_invoices_head">
         <thead style="background-color:#9E588B; color:#fff;">
             <tr>
                 <td id="detail_invoice_number">Number</td>
@@ -92,7 +92,7 @@
         </thead>
     </template>
 
-    <template id="l10n_es_bfa.mod140_invoices_line">
+    <template id="l10n_es_bfa_mod140.mod140_invoices_line">
         <td id="data_odoo_invoice">
             <t t-set="res_model" t-value="'account.move'"/>
             <span t-if="l.move_id">
@@ -165,7 +165,7 @@
         </t>
     </template>
 
-    <template id="l10n_es_bfa.mod140_taxes_head">
+    <template id="l10n_es_bfa_mod140.mod140_taxes_head">
         <thead style="background-color:#9E588B; color:#fff;">
             <tr>
                 <td id="summary_invoice_number"/>
@@ -180,7 +180,7 @@
         </thead>
     </template>
 
-    <template id="l10n_es_bfa.mod140_tax_summary">
+    <template id="l10n_es_bfa_mod140.mod140_tax_summary">
         <td id="data_summary_invoice_number"/>
         <td id="data_summary_invoice_date"/>
         <td id="data_summary_invoice_company"/>
@@ -202,7 +202,7 @@
         </td>
     </template>
 
-    <template id="l10n_es_bfa.mod140_summary">
+    <template id="l10n_es_bfa_mod140.mod140_summary">
         <td id="total_summary_invoice_number"/>
         <td id="total_summary_invoice_date"/>
         <td id="total_summary_invoice_company"/>

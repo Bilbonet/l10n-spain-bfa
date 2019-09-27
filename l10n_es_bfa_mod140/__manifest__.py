@@ -3,7 +3,7 @@
 
 {
     'name': 'BFA Modelo 140',
-    'version': '11.0.1.0.0',
+    'version': '12.0.1.0.0',
     'category': 'Accounting',
     'license': 'AGPL-3',
     'author': 'Jesus Ramiro (Bilbonet.NET)',
@@ -33,8 +33,8 @@
         'views/bfa_mod140_asset_statement_view.xml',
         'views/account_view.xml',
         'views/account_invoice_view.xml',
-        'report/common_templates.xml',
         'report/bfa_mod140_report.xml',
+        'report/common_templates.xml',
         'report/bfa_mod140_invoices_issued_report.xml',
         'report/bfa_mod140_invoices_received_report.xml',
     ],

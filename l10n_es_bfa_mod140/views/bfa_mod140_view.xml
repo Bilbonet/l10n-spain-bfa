@@ -41,7 +41,7 @@
                 <sheet>
                     <field name="currency_id" invisible="1"/>
                     <h1>
-                        <label string="Report "/>
+                        <label for='name' string="Report "/>
                         <field name="name" class="oe_inline" readonly="1"/>
                     </h1>
                     <group>
@@ -58,8 +58,9 @@
                             <field name="export_config_id" groups="base.group_no_one"/>
                         </group>
                         <group name="group_declarant_data" string="Declarant Data">
-                            <field name="declarant_name"/>
-                            <label string="Phone / Mobile "/>
+                            <label for="declarant_name" string="Surnames / Name"/>
+                            <field name="declarant_name" nolabel="1"/>
+                            <label for="declarant_phone" string="Phone / Mobile"/>
                             <div class="o_row">
                                 <field name="declarant_phone" nolabel="1"/>
                                 <field name="declarant_mobile" nolabel="1"/>
@@ -77,8 +78,9 @@
                         </group>
                         <group name="group_contact_data" string="Contact data">
                             <field name="contact_type"/>
-                            <field name="contact_name"/>
-                            <label string="Phone / Mobile"/>
+                            <label for="contact_name" string="Surnames / Name"/>
+                            <field name="contact_name" nolabel="1"/>
+                            <label for="contact_phone" string="Phone / Mobile"/>
                             <div class="o_row">
                                 <field name="contact_phone" nolabel="1"/>
                                 <field name="contact_mobile" nolabel="1"/>
@@ -92,7 +94,7 @@
                             <group>
                                 <group name="group_activity_data" string="Activity data">
                                     <field name="epigraph"/>
-                                    <label string="Activity Start/End"/>
+                                    <label for="activity_start" string="Activity Start/End"/>
                                     <div class="o_row">
                                         <field name="activity_start" nolabel="1"/>
                                         <field name="activity_end" nolabel="1"/>
@@ -112,11 +114,10 @@
                                     <field name="reg_others"/>
                                 </group>
                                 <group name="group_prorate_vat" string="Prorate VAT">
-                                    <label string="Prorate general"/>
+                                    <label for="pro_general" string="Prorate general"/>
                                     <div class="o_row">
                                         <field name="pro_general"/>
                                         <field name="pro_general_percent" attrs="{'invisible':[('pro_general','=',False)]}" widget="percentage"/>
-                                        <label string="%" attrs="{'invisible':[('pro_general','=',False)]}"/>
                                     </div>
                                     <field name="pro_special"/>
                                     <field name="all_exempt"/>
