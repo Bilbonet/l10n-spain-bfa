@@ -30,7 +30,7 @@
               </div>
               <div class="col-xs-12" id="invoices_issued_detail_div">
                 <table class="table table-condensed" id="invoices_issued_detail_table">
-                    <t t-call="l10n_es_bfa.mod140_invoices_head"/>
+                    <t t-call="l10n_es_bfa_mod140.mod140_invoices_head"/>
                     <tbody>
                         <tr t-foreach="o.issued_line_ids" t-as="l">
                             <t t-call="l10n_es_bfa_mod140.mod140_invoices_line"/>
@@ -44,7 +44,7 @@
               <div class="col-xs-12" id="rectification_invoices_issued_detail_div">
                 <table class="table table-condensed"
                        id="rectification_invoices_issued_detail_table">
-                    <t t-call="l10n_es_bfa.mod140_invoices_head"/>
+                    <t t-call="l10n_es_bfa_mod140.mod140_invoices_head"/>
                     <tbody>
                         <tr t-foreach="o.rectification_issued_line_ids" t-as="l">
                             <t t-call="l10n_es_bfa_mod140.mod140_invoices_line"/>

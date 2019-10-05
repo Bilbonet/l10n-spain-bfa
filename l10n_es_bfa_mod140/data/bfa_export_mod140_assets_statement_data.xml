@@ -111,7 +111,7 @@
         <field name="sequence">10</field>
         <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
         <field name="name">Fecha operación</field>
-        <field name="expression">${object.asset_id.date_operation.replace('-', '')}</field>
+        <field name="expression">${object.mod140_id._get_formatted_date(object.asset_id.date_operation)}</field>
         <field name="export_type">integer</field>
         <field name="apply_sign" eval="False"/>
         <field name="size">8</field>
@@ -132,7 +132,7 @@
         <field name="sequence">12</field>
         <field name="export_config_id" ref="bfa_mod140_assets_export_config"/>
         <field name="name">Fecha inicio utilización</field>
-        <field name="expression">${object.asset_id.date_start.replace('-', '')}</field>
+        <field name="expression">${object.mod140_id._get_formatted_date(object.asset_id.date_start)}</field>
         <field name="export_type">integer</field>
         <field name="apply_sign" eval="False"/>
         <field name="size">8</field>

@@ -1005,16 +1005,16 @@ class L10nEsBfaMod140(models.Model):
                 rcontext)
         return result
 
-    # @api.model
-    # def _get_formatted_date(self, date):
-    #     """Convert an Odoo date to BOE export date format.
-    #
-    #     :param date: Date in Odoo format or falsy value
-    #     :return: Date formatted for BOE export.
-    #     """
-    #     if not date:
-    #         return ''
-    #     return datetime.strftime(fields.Date.from_string(date), "%d%m%Y")
+    @api.model
+    def _get_formatted_date(self, date):
+        """Convert an Odoo date to BOE export date format.
+
+        :param date: Date in Odoo format or falsy value
+        :return: Date formatted for BOE export.
+        """
+        if not date:
+            return ''
+        return datetime.strftime(fields.Date.from_string(date), "%d%m%Y")
 
     def _format_date(self, date):
         # format date following user language
