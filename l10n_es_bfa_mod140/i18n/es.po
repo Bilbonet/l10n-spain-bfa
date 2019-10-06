@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 11.0\n"
+"Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-05-10 16:14+0000\n"
-"PO-Revision-Date: 2019-05-10 16:14+0000\n"
+"POT-Creation-Date: 2019-10-06 10:10+0000\n"
+"PO-Revision-Date: 2019-10-06 10:10+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,81 +16,172 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_all_issued_line_ids
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__all_issued_line_ids
 msgid "ALL Issued invoices"
 msgstr "Todas las facturas emitidas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_tax_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary__tax_id
 msgid "Account Tax"
 msgstr "Impuesto"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_account_pgc
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_account_pgc
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__account_pgc
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__account_pgc
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__account_pgc
 msgid "Account in the PGC"
 msgstr "Cuenta en el PGC"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__active
+msgid "Active"
+msgstr "Activo"
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Activity"
 msgstr "Actividad"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Activity Start/End"
-msgstr "Actividad Inicio/Fin"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Activity data"
-msgstr "Datos Actividad"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_activity_end
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__activity_end
 msgid "Activity end date"
 msgstr "Actividad Fecha Fin"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_epigraph
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__epigraph
 msgid "Activity epigraph"
 msgstr "Epigrafe Actividad"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_activity_start
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__activity_start
 msgid "Activity start date"
 msgstr "Actividad Fecha Inicio"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_all_received_line_ids
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__all_received_line_ids
 msgid "All Received invoices"
 msgstr "Todas las facturas recividas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_all_exempt
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__all_exempt
 msgid "All exempt operations"
 msgstr "Todas las operaciones exentas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_amortization
+#: selection:l10n.es.bfa.mod140.asset,titularity:0
+msgid "Alquiler"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: selection:l10n.es.bfa.mod140.asset,type_operation:0
+msgid "Alta"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__amortization
 msgid "Applies joint amortization, only for microenterprise"
 msgstr "Aplica amortización conjunta, solo para microempresa"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
 msgid "Aquí está el archivo BOB de la BFA exportado:"
-msgstr "Aquí está el archivo BOB de la BFA exportado:"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: selection:l10n.es.bfa.mod140.asset,titularity:0
+msgid "Arrendamiento Financiero"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__name
+msgid "Asset Description"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__asset_id
+msgid "Asset Name"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__ref
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__ref
+msgid "Asset Reference"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140_asset.py:61
+#: sql_constraint:l10n.es.bfa.mod140.asset:0
+#, python-format
+msgid "Asset reference must be unique!"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+msgid "Assets"
+msgstr "Activos"
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_statement_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_statement_tree_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+msgid "Assets in the statement"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__asset_ids
+msgid "Assets in this statement"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: model:ir.ui.menu,name:l10n_es_bfa_mod140.menu_l10n_es_bfa
 msgid "BFA"
-msgstr "BFA"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_tree_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_tree_view
 msgid "BFA Declaración"
-msgstr "BFA Declaración"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_form_view
+msgid "BFA Declaración Bien"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_tree_view
+msgid "BFA Declaración Bienes"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_account_invoice__mod140_asset_id
+msgid "BFA Model 140 Asset"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model,name:l10n_es_bfa_mod140.model_l10n_es_bfa_mod140_summary
+msgid "BFA Model 140 Summary"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model,name:l10n_es_bfa_mod140.model_l10n_es_bfa_mod140_asset
+msgid "BFA Modelo 140 Accounting Assets"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model,name:l10n_es_bfa_mod140.model_l10n_es_bfa_mod140_asset_statement
+msgid "BFA Modelo 140 Assets in the statement"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: model:ir.model,name:l10n_es_bfa_mod140.model_l10n_es_bfa_mod140_line
@@ -113,7 +204,7 @@ msgid "BFA Modelo 140 expenses without invoice"
 msgstr "BFA Modelo 140 gastos sin factura"
 
 #. module: l10n_es_bfa_mod140
-#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:428
+#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:433
 #, python-format
 msgid "BFA model sequence not found. You can try to restart your Odoo service for recreating the sequences."
 msgstr "BFA secuencia modelo no encontrada. Puedes intentar reiniciar Servicio de Odoo para regenerar la secuencia"
@@ -124,133 +215,205 @@ msgid "BFA report identifier must be unique"
 msgstr "BFA indetificación del informe debe ser único"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_base_amount
-msgid "Base"
-msgstr "Base"
+#: selection:l10n.es.bfa.mod140.asset,type_operation:0
+msgid "Baja"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary_base_amount
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_base_amount
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__base_amount
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_invoices_head
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_taxes_head
+msgid "Base"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary__base_amount
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary__base_amount
 msgid "Base amount"
 msgstr "Importe base"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary_book_type
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_book_type
+#: model:ir.ui.menu,name:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_menu
+msgid "Bienes Modelo 140"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Bienes grupo 20 PGC"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Bienes grupo 23 PGC"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary__book_type
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary__book_type
 msgid "Book type"
 msgstr "Tipo de libro"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_form_view
+msgid "Breve descripción del bien"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Calculate"
 msgstr "Calcular"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_calculation_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__calculation_date
 msgid "Calculation date"
 msgstr "Fecha de cálculo"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Cancel"
 msgstr "Cancelar"
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,state:0
 msgid "Cancelled"
-msgstr "Cancelled"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_reg_cash_criterion
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__reg_cash_criterion
 msgid "Cash criterion"
 msgstr "Criterio Caja"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_eds_irpf
+#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__eds_irpf
 msgid "Charges and payments EDS IRPF"
 msgstr "Cargos y Pagos EDS IRPF"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.actions.act_window,help:l10n_es_bfa_mod140.l10n_es_bfa_mod140_action
-msgid "Click para crear una nueva declaración."
-msgstr "Click para crear una nueva declaración."
+#: model_terms:ir.actions.act_window,help:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_action
+msgid "Click para crear un nuevo bien."
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
+#: model_terms:ir.actions.act_window,help:l10n_es_bfa_mod140.l10n_es_bfa_mod140_action
+msgid "Click para crear una nueva declaración."
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
 msgid "Close"
 msgstr "Cerrar"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_company_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__company_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__company_id
 msgid "Company"
 msgstr "Compañía"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_size
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_invoices_head
+msgid "Company Name"
+msgstr "Nombre de la compañía"
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__size
 msgid "Company size"
 msgstr "Tamaño compañia"
 
 #. module: l10n_es_bfa_mod140
-#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:410
+#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:415
 #, python-format
 msgid "Company vat and representative vat can't be equals."
 msgstr "Nif compañia y Nif del representante no pueden ser iguales."
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_contact_type
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_dates
+msgid "Company:"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__contact_mobile
+msgid "Contact Mobile"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__contact_phone
+msgid "Contact Phone"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__contact_type
 msgid "Contact Type"
 msgstr "Tipo Contacto"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Contact data"
 msgstr "Datos de contacto"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_contact_email
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__contact_email
 msgid "Contact email"
 msgstr "Correo electrónico"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_contact_name
+#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__contact_name
 msgid "Contact full name, must have surnames, name."
 msgstr "Nombre completa contacto debe ser apellidos, nombre."
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_create_uid
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_create_uid
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_create_uid
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_create_uid
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary_create_uid
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_create_uid
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_contact
+msgid "Contact phone:"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__contact_name
+msgid "Contact: Surnames, Name"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__create_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__create_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__create_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__create_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__create_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__create_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary__create_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary__create_uid
 msgid "Created by"
 msgstr "Creado por"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_create_date
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_create_date
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_create_date
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_create_date
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary_create_date
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_create_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__create_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__create_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__create_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__create_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__create_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__create_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary__create_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary__create_date
 msgid "Created on"
 msgstr "Creado en"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_currency_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__currency_id
 msgid "Currency"
 msgstr "Moneda"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_dates
+msgid "Date Range:"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Dates"
 msgstr "Fechas"
 
 #. module: l10n_es_bfa_mod140
 #: model:ir.ui.menu,name:l10n_es_bfa_mod140.menu_l10n_es_bfa_mod140_report
 msgid "Declaración Modelo 140"
-msgstr "Declaración Modelo 140"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,contact_type:0
@@ -258,44 +421,61 @@ msgid "Declarant"
 msgstr "Declarante"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Declarant Data"
-msgstr "Datos Declarante"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_declarant_name
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__declarant_mobile
+msgid "Declarant Mobile"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__declarant_phone
+msgid "Declarant Phone"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__declarant_name
 msgid "Declarant full name, must have surnames, name."
 msgstr "Nombre completo declarante debe ser apllidos, nombre."
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__declarant_name
+msgid "Declarant: Surnames, Name"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Declaration"
-msgstr "Declaración"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,regime_irpf:0
 msgid "Directa Normal"
-msgstr "Directa Normal"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,regime_irpf:0
 msgid "Directa Simplificada"
-msgstr "Directa Simplificada"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_display_name
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_display_name
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_display_name
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_display_name
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary_display_name
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_display_name
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__display_name
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__display_name
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__display_name
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__display_name
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__display_name
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__display_name
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary__display_name
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary__display_name
 msgid "Display Name"
 msgstr "Nombre mostrado"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Domicile activity"
-msgstr "Domicilio Actividad"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,state:0
@@ -303,465 +483,568 @@ msgid "Done"
 msgstr "Hecho"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 #: selection:l10n.es.bfa.mod140,state:0
 msgid "Draft"
 msgstr "Borrador"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_declarant_email
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__declarant_email
 msgid "E-mail"
-msgstr "E-mail"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_eds_irpf
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__eds_irpf
 msgid "EDS IRPF"
-msgstr "EDS IRPF"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_partner_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__partner_id
 msgid "Empresa"
-msgstr "Empresa"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,size:0
 msgid "Empresa pequeña"
-msgstr "Empresa pequeña"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_date_end
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__date_end
 msgid "Ending date"
 msgstr "Fecha final"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_reg_equi
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Equipo Informático"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__reg_equi
 msgid "Equivalence surcharge"
 msgstr "Recargo Equivalencia"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_exception
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_exception
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__exception
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__exception
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__exception
 msgid "Exception"
 msgstr "Excepción"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_exception_text
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_exception_text
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__exception_text
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__exception_text
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__exception_text
 msgid "Exception text"
 msgstr "Texto de excepción"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__date
 msgid "Expense Date"
 msgstr "fecha Gasto"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_amount
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__amount
 msgid "Expense amount"
 msgstr "Cantidad gasto"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Expenses"
 msgstr "Gastos"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Expenses Without Invoice"
-msgstr "Gastos Sin factura"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_noinvoice_ids
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_line_noinvoice_form_view
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__noinvoice_ids
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_line_noinvoice_form_view
 msgid "Expenses without invoice"
 msgstr "Gastos Sin factura"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_line_noinvoice_tree_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_line_noinvoice_tree_view
 msgid "Expenses without invoices"
-msgstr "Gastos Sin factura"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__export
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
 msgid "Export"
 msgstr "Exportar"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
-msgid "Export BFA BOB file"
-msgstr "Exportar archivo BFA BOB"
-
-#. module: l10n_es_bfa_mod140
 #: model:ir.actions.act_window,name:l10n_es_bfa_mod140.bfa_mod140_export_action_wizard
-msgid "Export BFA BOE file"
-msgstr "Exportar archivo BFA BOB"
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
+msgid "Export BFA BOB file"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_export_config_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__export_config_id
 msgid "Export config"
 msgstr "Configuración de exportación"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Export to BOE"
 msgstr "Exportar a BOE"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
 msgid "Exportación completada"
-msgstr "Exportación completada"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_external_ref
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__external_ref
 msgid "External Reference"
 msgstr "Referencia Externa"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_reg_general
-msgid "General regime"
-msgstr "General regime"
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Fax"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_id
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_id
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_id
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_id
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary_id
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_id
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_form_view
+msgid "Fecha operación"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_invoices_head
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_taxes_head
+msgid "Fee"
+msgstr "Cuota"
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_dates
+msgid "Fiscal Year:"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__reg_general
+msgid "General regime"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary__id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary__id
 msgid "ID"
 msgstr "ID (identificación)"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_invoice_id
+#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__active
+msgid "If the active field is set to False, it will allow you to hide the asset without removing it."
+msgstr "Si el campo activo se desactiva, te permitirá ocultar el elemento técnico sin eliminarlo."
+
+#. module: l10n_es_bfa_mod140
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Instalaciones"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model,name:l10n_es_bfa_mod140.model_account_invoice
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__invoice_id
 msgid "Invoice"
 msgstr "Factura"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_invoice_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__invoice_date
 msgid "Invoice Date"
 msgstr "Fecha de la factura"
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_invoices_head
+msgid "Issue Date"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140.line,line_type:0
 #: selection:l10n.es.bfa.mod140.summary,book_type:0
 #: selection:l10n.es.bfa.mod140.tax.summary,book_type:0
 msgid "Issued"
-msgstr "Issued"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_issued_document
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_issued_document
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Issued Invoices"
 msgstr "Facturas emitidas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_rectification_issued_line_ids
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_issued_document
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__rectification_issued_line_ids
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_issued_document
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Issued Refund Invoices"
 msgstr "Facturas rectificativas emitidas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_issued_summary_ids
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__issued_summary_ids
 msgid "Issued Summary"
 msgstr "Resumen Emitidas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_issued_tax_summary_ids
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__issued_tax_summary_ids
 msgid "Issued Tax Summary"
 msgstr "Resumen Impuestos Emitidas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_issued_line_ids
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__issued_line_ids
 msgid "Issued invoices"
 msgstr "Facturas emitidas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_ids
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_line_form_view
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_line_tree_view
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__line_ids
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_line_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_line_tree_view
 msgid "Issued/Received invoices"
 msgstr "Facturas Emitidas/Recibidas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_amortization
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__amortization
 msgid "Joint amortization"
-msgstr "Joint amortization"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_move_id
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_move_id
+#: model:ir.model,name:l10n_es_bfa_mod140.model_account_journal
+msgid "Journal"
+msgstr "Diario"
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__move_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__move_id
 msgid "Journal Entry"
 msgstr "Asiento contable"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_move_line_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__move_line_id
 msgid "Journal Entry Line"
-msgstr "Journal Entry Line"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_key_nif
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__key_nif
 msgid "Key identification. Type of identification document"
-msgstr "Key identification. Type of identification document"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140___last_update
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line___last_update
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice___last_update
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax___last_update
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary___last_update
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary___last_update
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140____last_update
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset____last_update
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement____last_update
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line____last_update
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice____last_update
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax____last_update
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary____last_update
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary____last_update
 msgid "Last Modified on"
 msgstr "Última modificación en"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_write_uid
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_write_uid
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_write_uid
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary_write_uid
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_write_uid
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_write_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__write_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__write_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__write_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__write_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__write_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__write_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary__write_uid
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary__write_uid
 msgid "Last Updated by"
 msgstr "Última actualización de"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_write_date
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_write_date
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_write_date
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary_write_date
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_write_date
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_write_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__write_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__write_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__write_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__write_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__write_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__write_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary__write_date
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary__write_date
 msgid "Last Updated on"
 msgstr "Última actualización en"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_representative_vat
+#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__representative_vat
 msgid "Legal Representative VAT number."
 msgstr "NIF del representante legal."
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_representative_name
+#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__representative_name
 msgid "Legal Representative full name, must have surnames, name."
-msgstr "Legal Representative full name, must have surnames, name."
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_line_type
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__line_type
 msgid "Line type"
 msgstr "Tipo de línea"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_issued_document
-msgid "MODEL 140 OF INVOICES ISSUED"
-msgstr "MODEL 140 OF INVOICES ISSUED"
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Local"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_received_document
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_issued_document
+msgid "MODEL 140 OF INVOICES ISSUED"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_received_document
 msgid "MODEL 140 OF INVOICES RECEIVED"
-msgstr "MODEL 140 OF INVOICES RECEIVED"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Maquinaria"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Medios de transporte"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: selection:l10n.es.bfa.mod140.asset,type_operation:0
+msgid "Mejora"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,size:0
 msgid "Microempresa"
-msgstr "Microempresa"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_contact_mobile
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_declarant_mobile
-msgid "Mobile"
-msgstr "Móvil"
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Mobiliario"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_mod140_line_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__mod140_line_id
 msgid "Mod140 Line"
-msgstr "Mod140 Line"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: model:ir.actions.client,name:l10n_es_bfa_mod140.bfa_mod140_issued_html_report_action
 msgid "Model 140 Invoices Issued"
-msgstr "Model 140 Invoices Issued"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: model:ir.actions.client,name:l10n_es_bfa_mod140.bfa_mod140_received_html_report_action
 msgid "Model 140 Invoices Received"
-msgstr "Model 140 Invoices Received"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: model:ir.actions.report,name:l10n_es_bfa_mod140.bfa_mod140_issued_pdf_report_action
 msgid "Model 140 invoices issued"
-msgstr "Model 140 invoices issued"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: model:ir.actions.report,name:l10n_es_bfa_mod140.bfa_mod140_received_pdf_report_action
 msgid "Model 140 invoices received"
-msgstr "Model 140 invoices received"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_number
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__number
 msgid "Model number"
 msgstr "Nº modelo"
 
 #. module: l10n_es_bfa_mod140
+#: model:ir.actions.act_window,name:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_action
+msgid "Modelo 140 Asset"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
 #: model:ir.actions.act_window,name:l10n_es_bfa_mod140.l10n_es_bfa_mod140_action
-msgid "Modelo 140"
-msgstr "Modelo 140"
+msgid "Modelo 140 Declaración"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_mod140_id
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_mod140_id
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary_mod140_id
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_mod140_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__mod140_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__mod140_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__mod140_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary__mod140_id
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary__mod140_id
 msgid "Modelo 140 id"
-msgstr "Modelo 140 id"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:904
+#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:966
 #, python-format
-msgid "Modelo no vÃ¡lido: %s. Debe declarar una variable '_bfa_number'"
-msgstr "Modelo no vÃ¡lido: %s. Debe declarar una variable '_bfa_number'"
+msgid "Modelo no válido: %s. Debe declarar una variable '_bfa_number'"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_move_line_ids
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_line_form_view
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__move_line_ids
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_line_form_view
 msgid "Move Lines"
 msgstr "Apuntes"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_vat_number
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__vat_number
 #: selection:l10n.es.bfa.mod140.line,key_nif:0
 msgid "NIF"
-msgstr "NIF"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140.line,key_nif:0
 msgid "NIF intracommunity"
-msgstr "NIF intracommunity"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Net income regime IRPF"
-msgstr "Net income regime IRPF"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:782
+#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:838
 #, python-format
 msgid "No BFA Model 140 Tax Mapping was found"
-msgstr "No BFA Model 140 Tax Mapping was found"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,type:0
 msgid "Normal"
-msgstr "Normal"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:863
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_invoices_head
+msgid "Number"
+msgstr "Número"
+
+#. module: l10n_es_bfa_mod140
+#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:925
 #, python-format
 msgid "Only reports in 'draft' or 'cancelled' state can be removed"
-msgstr "Only reports in 'draft' or 'cancelled' state can be removed"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_operation_type
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__date_operation
+msgid "Operation date"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__operation_type
 msgid "Operation type"
 msgstr "Tipo de operación"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Other data"
-msgstr "Other data"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,contact_type:0
 msgid "Others"
-msgstr "Others"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_reg_others
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__reg_others
 msgid "Others special regimes"
-msgstr "Others special regimes"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_partner_id
+#: selection:l10n.es.bfa.mod140.asset,titularity:0
+msgid "Otros"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Otros bienes grupo 21 PGC"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Otros inmuebles"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__partner_id
 msgid "Partner"
 msgstr "Empresa"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_period_type
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__period_type
 msgid "Period type"
 msgstr "Tipo de periodo"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_contact_phone
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_declarant_phone
-msgid "Phone"
-msgstr "Teléfono"
-
-#. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Phone / Mobile"
-msgstr "Phone / Mobile"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
 msgid "Ponga este archivo dentro de su carpeta personal de la BFA, y úselo en el programa <strong>Informativas</strong>."
-msgstr "Ponga este archivo dentro de su carpeta personal de la BFA, y úselo en el programa <strong>Informativas</strong>."
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,state:0
 msgid "Posted"
-msgstr "Posted"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,state:0
 msgid "Processed"
-msgstr "Processed"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: selection:l10n.es.bfa.mod140.asset,titularity:0
+msgid "Propiedad"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Prorate VAT"
-msgstr "Prorate VAT"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_pro_general
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__pro_general
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Prorate general"
-msgstr "Prorate general"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_pro_general_percent
+#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__pro_general_percent
 msgid "Prorate general (%)"
-msgstr "Prorate general (%)"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_pro_general_percent
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__pro_general_percent
 msgid "Prorate general percent"
-msgstr "Prorate general percent"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: sql_constraint:l10n.es.bfa.mod140:0
 msgid "Prorate general percent cannot be negative."
-msgstr "Prorate general percent cannot be negative."
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_pro_special
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__pro_special
 msgid "Prorate special"
-msgstr "Prorate special"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
 msgid "Pulse el botón <strong>Exportar</strong> para iniciar el proceso de exportación del archivo BOB de la BFA."
-msgstr "Pulse el botón <strong>Exportar</strong> para iniciar el proceso de exportación del archivo BOB de la BFA."
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_representative_name
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__representative_name
 msgid "R.Surnames, Name"
-msgstr "R.Surnames, Name"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_representative_vat
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__representative_vat
 msgid "R.VAT number"
-msgstr "R.VAT number"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Recalculate"
 msgstr "Recalcular"
 
@@ -770,250 +1053,318 @@ msgstr "Recalcular"
 #: selection:l10n.es.bfa.mod140.summary,book_type:0
 #: selection:l10n.es.bfa.mod140.tax.summary,book_type:0
 msgid "Received"
-msgstr "Received"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_received_document
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_received_document
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Received Invoices"
 msgstr "Facturas recibidas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_rectification_received_line_ids
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_received_document
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__rectification_received_line_ids
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_received_document
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Received Refund Invoices"
 msgstr "Facturas rectificativas recibidas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_received_summary_ids
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__received_summary_ids
 msgid "Received Summary"
 msgstr "Resumen recibidas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_received_tax_summary_ids
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__received_tax_summary_ids
 msgid "Received Tax Summary"
 msgstr "Resumen impuestos recibidas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_received_line_ids
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__received_line_ids
 msgid "Received invoices"
 msgstr "Facturas recibidas"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice_ref
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_ref
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__ref
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_noinvoice__ref
 msgid "Reference"
 msgstr "Referencia"
 
 #. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_form_view
+msgid "Referencia"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_form_view
+msgid "Referencia única para el bien"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140.line,line_type:0
 msgid "Refund Issued"
-msgstr "Refund Issued"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140.line,line_type:0
 msgid "Refund Received"
-msgstr "Refund Received"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_regime_irpf
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__regime_irpf
 msgid "Regime IRPF"
-msgstr "Regime IRPF"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Regime VAT"
-msgstr "Regime VAT"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_register_type
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__register_type
 msgid "Register type"
-msgstr "Register type"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: selection:l10n.es.bfa.mod140.asset,type_operation:0
+msgid "Regularización"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Report"
 msgstr "Informe"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_name
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__name
 msgid "Report Name"
 msgstr "Nombre del informe"
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,contact_type:0
 msgid "Representative"
-msgstr "Representative"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_reg_simplified
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_form_view
+msgid "Si ya están creados estos bienes en la aplicación de BILA, <strong>es importante que coincida la referencia.</strong>"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__reg_simplified
 msgid "Simplified regime"
-msgstr "Simplified regime"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_special_operation
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Solar"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_form_view
+msgid "Solo se dan de alta los campos obligatorios para la importación. El resto de datos se cumplimentan en la aplicación BILA."
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__special_operation
 msgid "Special operation"
-msgstr "Special operation"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_reg_agp
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__reg_agp
 msgid "Special regime agriculture livestock fishing"
-msgstr "Special regime agriculture livestock fishing"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_date_start
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__date_start
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__date_start
 msgid "Starting date"
 msgstr "Fecha inicial"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_state
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__state
 msgid "State"
 msgstr "Estado"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_type
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__type
 msgid "Statement Type"
 msgstr "Tipo de declaración"
 
 #. module: l10n_es_bfa_mod140
 #: selection:l10n.es.bfa.mod140,type:0
 msgid "Substitutive"
-msgstr "Substitutive"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary_ids
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_issued_document
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_received_document
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_summary_form_view
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_summary_tree_view
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__summary_ids
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_issued_document
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_mod140_invoices_received_document
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_summary_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_summary_tree_view
 msgid "Summary"
 msgstr "Resumen"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_contact_name
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_declarant_name
-msgid "Surnames, Name"
-msgstr "Surnames, Name"
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+msgid "Surnames / Name"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_tax_id
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_contact
+msgid "Surnames and name contact:"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__tax_id
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_invoices_head
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_taxes_head
 msgid "Tax"
 msgstr "Impuesto"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_line_ids
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line__tax_line_ids
 msgid "Tax Lines"
 msgstr "Líneas de Impuestos"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_tax_rate
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__tax_rate
 msgid "Tax Rate (%)"
 msgstr "Tipo Impositivo (%)"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_ids
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_tax_summary_form_view
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_tax_summary_tree_view
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__tax_summary_ids
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_tax_summary_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_tax_summary_tree_view
 msgid "Tax Summary"
 msgstr "Resumen de impuestos"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary_tax_amount
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_tax_amount
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary__tax_amount
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary__tax_amount
 msgid "Tax amount"
 msgstr "Cuota"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_tax_amount
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__tax_amount
 msgid "Tax fee"
 msgstr "Cuota"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "Tax summary"
-msgstr "Resumen impuestos"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_line_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_line_form_view
 msgid "Taxes"
 msgstr "Impuestos"
 
 #. module: l10n_es_bfa_mod140
-#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:739
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Teléfono fijo"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: selection:l10n.es.bfa.mod140.asset,type_asset:0
+msgid "Teléfono móvil"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:729
 #, python-format
 msgid "The amount is negative"
-msgstr "The amount is negative"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: code:addons/l10n_es_bfa_mod140/wizard/mod140_export_to_bob.py:58
-#: code:addons/l10n_es_bfa_mod140/wizard/mod140_export_to_bob.py:104
-#, python-format
-msgid "The formated string must match the given length"
-msgstr "The formated string must match the given length"
-
-#. module: l10n_es_bfa_mod140
-#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:660
+#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:650
 #, python-format
 msgid "The partner doesn't have a VAT number"
-msgstr "The partner doesn't have a VAT number"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:766
+#: code:addons/l10n_es_bfa_mod140/models/bfa_mod140.py:822
 #, python-format
 msgid "This company doesn't have VAT"
-msgstr "This company doesn't have VAT"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax_total_amount
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_asset_form_view
+msgid "Tipo Operación"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__titularity
+msgid "Titularity of the asset"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_line_tax__total_amount
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_invoices_head
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_summary
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_taxes_head
 msgid "Total"
-msgstr "Total"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary_total_amount
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary_total_amount
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_summary__total_amount
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_tax_summary__total_amount
 msgid "Total amount"
 msgstr "Importe Total"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_company_vat
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__type_asset
+msgid "Type of asset"
+msgstr "Type de elemento"
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset__type_operation
+msgid "Type of operation"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_account_invoice__use_mod140_asset
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_account_journal__use_mod140_asset
+msgid "Use BFA model 140 asset"
+msgstr ""
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_invoices_head
+msgid "VAT"
+msgstr "NIF"
+
+#. module: l10n_es_bfa_mod140
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__company_vat
 msgid "VAT number"
 msgstr "NIF"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.mod140_contact
+msgid "VAT:"
+msgstr "NIF:"
+
+#. module: l10n_es_bfa_mod140
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "View Issued Invoices"
-msgstr "Ver facturas emitidas"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
+#: model_terms:ir.ui.view,arch_db:l10n_es_bfa_mod140.l10n_es_bfa_mod140_form_view
 msgid "View Received Invoices"
-msgstr "Ver facturas recibidas"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
-#: code:addons/l10n_es_bfa_mod140/wizard/mod140_export_to_bob.py:55
-#, python-format
-msgid "Wrong aling option. It should be < or >"
-msgstr "Wrong aling option. It should be < or >"
-
-#. module: l10n_es_bfa_mod140
-#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_year
+#: model:ir.model.fields,field_description:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140__year
 msgid "Year"
 msgstr "Año"
 
 #. module: l10n_es_bfa_mod140
-#: model:ir.model,name:l10n_es_bfa_mod140.model_l10n_es_bfa_mod140_summary
-msgid "l10n.es.bfa.mod140.summary"
-msgstr "l10n.es.bfa.mod140.summary"
+#: model:ir.model.fields,help:l10n_es_bfa_mod140.field_l10n_es_bfa_mod140_asset_statement__export
+msgid "You can decide if export the asset in the export file for BFA declaration"
+msgstr ""
 
 #. module: l10n_es_bfa_mod140
 #: model:ir.model,name:l10n_es_bfa_mod140.model_l10n_es_bfa_mod140_tax_summary
 msgid "l10n.es.bfa.mod140.tax.summary"
-msgstr "l10n.es.bfa.mod140.tax.summary"
-
-#. module: l10n_es_bfa_mod140
-#: model:ir.ui.view,arch_db:l10n_es_bfa_mod140.bfa_export_wizard
-msgid "or"
-msgstr "o"
+msgstr ""
 
