@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <odoo>
-
-    <record id="es_bfa_expenses_journal" model="account.journal">
-        <field name="name">Gastos (BFA)</field>
-        <field name="code">GASTO</field>
-        <field name="type">purchase</field>
-        <field name="invoice_sequence_id" ref="es_bfa_expenses_journal_sequence"/>
-    </record>
-
+    <data noupdate="1">
+        <record id="es_bfa_expenses_journal" model="account.journal">
+            <field name="name">Gastos (BFA)</field>
+            <field name="code">GASTO</field>
+            <field name="type">purchase</field>
+            <field name="invoice_sequence_id" ref="es_bfa_expenses_journal_sequence"/>
+        </record>
+    </data>
 </odoo>
