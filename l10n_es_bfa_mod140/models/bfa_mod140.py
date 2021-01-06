@@ -788,18 +788,20 @@ class L10nEsBfaMod140(models.Model):
     # ----------------------------------
     @api.multi
     def button_calculate(self):
-        self.write({'state': 'calculated',
-                    'calculation_date': fields.Datetime.now()})
-        """
-            Funcion call from mod140
-        """
+        self.update({
+            'state': 'calculated',
+            'calculation_date': fields.Datetime.now()
+        })
         self._calculate_mod140()
         return True
 
     @api.multi
     def button_recalculate(self):
-        # self.write({'calculation_date': fields.Datetime.now()})
-        return self.button_calculate()
+        self.update({
+            'calculation_date': fields.Datetime.now()
+        })
+        self._calculate_mod140()
+        return True
 
     def _clear_old_data(self):
         """
@@ -840,18 +842,18 @@ class L10nEsBfaMod140(models.Model):
             # Obtain all the codes from account.tax.code.template
             codes_issued = tax_code_map.map_line_ids.mapped(
                 'tax_ids').filtered(
-                lambda t: t.type_tax_use == 'sale').mapped('description')
+                lambda t: t.type_tax_use == 'sale').mapped('name')
             codes_received = tax_code_map.map_line_ids.mapped(
                 'tax_ids').filtered(
                 lambda t: t.type_tax_use == 'purchase').mapped(
-                'description')
+                'name')
 
             # search the account.tax referred to by codes and the company
             taxes_issued = tax_model.search(
-                [('description', 'in', codes_issued),
+                [('name', 'in', codes_issued),
                  ('company_id', 'child_of', rec.company_id.id)])
             taxes_received = tax_model.search(
-                [('description', 'in', codes_received),
+                [('name', 'in', codes_received),
                  ('company_id', 'child_of', rec.company_id.id)])
 
             # Get all the account move lines that contain VAT that is
@@ -1014,7 +1016,7 @@ class L10nEsBfaMod140(models.Model):
         """
         if not date:
             return ''
-        return datetime.strftime(fields.Date.from_string(date), "%d%m%Y")
+        return datetime.strftime(fields.Date.from_string(date), "%Y%m%d")
 
     def _format_date(self, date):
         # format date following user language

@@ -16,6 +16,7 @@
                 <field name="year"/>
                 <field name="period_type"/>
                 <field name="state"/>
+                <field name="calculation_date"/>
                 <field name="company_id" groups="base.group_multi_company"/>
             </tree>
         </field>

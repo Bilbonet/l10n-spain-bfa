@@ -10,8 +10,8 @@
         <field name="map_parent_id" ref="bfa_mod140_map"/>
         <field name="tax_ids" eval="[(6, 0, [
             ref('l10n_es.account_tax_template_s_iva21b'),
-            ref('l10n_es.account_tax_template_s_iva4b'),
             ref('l10n_es.account_tax_template_s_iva10b'),
+            ref('l10n_es.account_tax_template_s_iva4b'),
         ])]"/>
         <field name="name">SuministroFactEmitidas Sujetas Bienes</field>
     </record>
